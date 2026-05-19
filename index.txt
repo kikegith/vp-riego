@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VPRIEGO - Tuberías y Sistemas de Riego</title>
+    <style>
+        /* DOCUMENTACIÓN: Configuración de Variables de Diseño Global */
+        :root {
+            --color-primario: #0077b6;      /* Azul - Agua Potable */
+            --color-secundario: #5c677d;    /* Gris - Alcantarillado */
+            --color-terciario: #38b000;      /* Verde - Riego VP */
+            --color-oscuro: #1d3557;
+            --color-fondo: #f8f9fa;
+            --blanco: #ffffff;
+            --verde-whatsapp: #25d366;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: var(--color-fondo);
+            color: #333;
+        }
+
+        header {
+            background-color: var(--color-oscuro);
+            color: var(--blanco);
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--color-terciario);
+        }
+
+        nav a {
+            color: var(--blanco);
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-weight: bold;
+        }
+
+        .hero {
+            background-color: #2a6f97;
+            color: var(--blanco);
+            text-align: center;
+            padding: 4rem 1rem;
+        }
+
+        .seccion-catalogos {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+
+        .titulo-seccion {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--color-oscuro);
+        }
+
+        .grid-catalogos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .categoria-bloque {
+            background: var(--blanco);
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .categoria-banner {
+            padding: 1.2rem;
+            color: var(--blanco);
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .bg-agua { background-color: var(--color-primario); }
+        .bg-alcantarillado { background-color: var(--color-secundario); }
+        .bg-riego { background-color: var(--color-terciario); }
+
+        /* DOCUMENTACIÓN CSS: Control de responsividad de las imágenes */
+        .producto-imagen {
+            width: 100%;
+            height: 200px;         /* Altura fija para mantener simetría */
+            object-fit: cover;     /* Recorta la imagen proporcionalmente sin deformarla */
+            background-color: #e9ecef; /* Fondo gris de carga en lo que se asignan fotos reales */
+        }
+
+        .lista-productos {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            flex-grow: 1;
+        }
+
+        .producto-item {
+            padding: 1.2rem 1.5rem;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .producto-item:last-child {
+            border-bottom: none;
+        }
+
+        .producto-nombre {
+            font-weight: 600;
+            font-size: 1.05rem;
+        }
+
+        .producto-detalle {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Botón de Cotización vía WhatsApp */
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--verde-whatsapp);
+            color: var(--blanco);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            transition: background 0.2s;
+            text-align: center;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #1ebd58;
+        }
+
+        footer {
+            background-color: var(--color-oscuro);
+            color: var(--blanco);
+            padding: 3rem 2rem 1.5rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-contenido {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            border-bottom: 1px solid #344a6e;
+            padding-bottom: 2rem;
+        }
+
+        .footer-columna h4 {
+            color: var(--color-terciario);
+            margin-top: 0;
+            font-size: 1.2rem;
+        }
+
+        .footer-columna p {
+            margin: 0.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        .footer-columna a {
+            color: var(--blanco);
+            text-decoration: none;
+        }
+
+        .footer-derechos {
+            text-align: center;
+            padding-top: 1.5rem;
+            font-size: 0.85rem;
+            color: #a3b1c6;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>VP<span>RIEGO</span></h1>
+        </div>
+        <nav>
+            <a href="#catalogos">Catálogos</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Sistemas Profesionales de Conducción de Fluidos</h2>
+        <p>Expertos en distribución de tuberías de alta resistencia para proyectos de ingeniería y agricultura.</p>
+    </section>
+
+    <main class="seccion-catalogos" id="catalogos">
+        <h2 class="titulo-seccion">Nuestros Catálogos Especializados</h2>
+        
+        <div class="grid-catalogos">
+            
+            <!-- CATÁLOGO 1: AGUA POTABLE -->
+            <div class="categoria-bloque">
+                <div class="categoria-banner bg-agua">Agua Potable</div>
+                <!-- Marcador de imagen: Reemplazar src con tu archivo de imagen real -->
+                <img src="Tuberia agua.jpg" alt="Tuberías de agua potable" class="producto-imagen">
+                <ul class="lista-productos">
+                    <li class="producto-item">
+                        <div>
+                            <div class="producto-nombre">Tubería PVC Presión Uniflex</div>
+                            <div class="producto-detalle">Para redes matrices y uniones mecánicas</div>
+                        </div>
+                        <!-- Enlace API WhatsApp codificado para el Producto 1 -->
+                        <a href="https://wa.me/593996541024?text=Hola%20VPRIEGO,%20me%20interesa%20cotizar%20la%20Tuber%C3%ADa%20PVC%20Presi%C3%B3n%20Uniflex%20para%20Agua%20Potable." target="_blank" class="btn-whatsapp">Cotizar por WhatsApp</a>
+                    </li>
+                    <li class="producto-item">
+                        <div>
+                            <div class="producto-nombre">Tubería PEAD (Polietileno)</div>
+                            <div class="producto-detalle">Alta densidad, rollos y tramos rectos</div>
+                        </div>
+                        <a href="mangueras agua.jpg " target="_blank" class="btn-whatsapp">Cotizar por WhatsApp</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- CATÁLOGO 2: ALCANTARILLADO -->
+            <div class="categoria-bloque">
+                <div class="categoria-banner bg-alcantarillado">Alcantarillado</div>
+                <img src="https://images.unsplash.com/photo-1585338107529-13afc5f02586?auto=format&fit=crop&w=400&q=80" alt="Tuberías corrugadas de alcantarillado" class="producto-imagen">
+                <ul class="lista-productos">
+                    <li class="producto-item">
+                        <div>
+                            <div class="producto-nombre">Tubería PVC Corrugada</div>
+                            <div class="producto-detalle">Estructurada para sistemas pluviales y sanitarios</div>
+                        </div>
+                        <a href="https://wa.me/593996541024?text=Hola%20VPRIEGO,%20me%20interesa%20cotizar%20la%20Tuber%C3%ADa%20PVC%20Corrugada%20para%20Alcantarillado." target="_blank" class="btn-whatsapp">Cotizar por WhatsApp</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- CATÁLOGO 3: RIEGO -->
+            <div class="categoria-bloque">
+                <div class="categoria-banner bg-riego">Sistemas de Riego</div>	
+                <img src="aspersores.jpg "Sistemas de riego agrícola" class="producto-imagen">
+                <ul class="lista-productos">
+                    <li class="producto-item">
+                        <div>
+                            <div class="producto-nombre">Manguera Polietileno Riego</div>
+                            <div class="producto-detalle">Baja densidad, ideal para derivaciones</div>
+                        </div>
+                        <a href="mangueras agua.jpg " target="_blank" class="btn-whatsapp">Cotizar por WhatsApp</a>
+                    </li>
+                    <li class="producto-item">
+                        <div>
+                            <div class="producto-nombre">Cinta de Goteo</div>
+                            <div class="producto-detalle">Con goteros integrados a diversas distancias</div>
+                        </div>
+                        <a href="https://wa.me/593996541024?text=Hola%20VPRIEGO,%20me%20interesa%20cotizar%20la%20Cinta%20de%20Goteo%20para%20sistemas%20de%20riego." target="_blank" class="btn-whatsapp">Cotizar por WhatsApp</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+
+    <footer id="contacto">
+        <div class="footer-contenido">
+            <div class="footer-columna">
+                <h4>VPRIEGO</h4>
+                <p>Tu aliado estratégico en infraestructura hidráulica, alcantarillado sanitario y tecnificación de riego agrícola.</p>
+            </div>
+            <div class="footer-columna">
+                <h4>Ubicación Principal</h4>
+                <p>Av. Oswaldo Guayasamín N34-234 y Universitaria</p>
+                <p><strong>Sector:</strong> Villa Vega - Tumbaco</p>
+            </div>
+            <div class="footer-columna">
+                <h4>Líneas de Atención</h4>
+                <p>Celular 1: <a href="tel:0996541024">099 654 1024</a></p>
+                <p>Celular 2: <a href="tel:0996600715">099 660 0715</a></p>
+            </div>
+        </div>
+        <div class="footer-derechos">
+            <p>&copy; 2026 VPRIEGO. Todos los derechos de programación reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

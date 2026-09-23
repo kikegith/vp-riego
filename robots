@@ -1,1 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kikegith.github.io/vp-riego/sitemap.xml
 

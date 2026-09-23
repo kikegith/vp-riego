@@ -3,18 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>VPRIEGO | Tuberías y Sistemas de Riego en Tumbaco - Quito</title>
-    <meta name="description" content="Expertos en distribución de tuberías PVC, PEAD, sistemas de riego agrícola y alcantarillado en Tumbaco. Cotiza directo por WhatsApp con marcas líderes.">
-    <meta name="keywords" content="tuberias tumbaco, sistemas de riego quito, pvc presion uniflex, manguera polietileno ecuador, vpriego">
-    <meta name="author" content="VPRIEGO">
-
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="VPRIEGO | Tuberías y Sistemas de Riego Profesionales">
-    <meta property="og:description" content="Distribución de tuberías de alta resistencia para ingeniería y agricultura en Quito y Tumbaco. ¡Cotiza tu presupuesto hoy!">
-    <meta property="og:image" content="logo final.jpg">
-    <meta property="og:url" content="https://kikegith.github.io/vp-riego/">
-
+    <title>VPRIEGO - Tuberías y Sistemas de Riego</title>
     <style>
         /* DOCUMENTACIÓN: Configuración de Variables de Diseño Global */
         :root {
@@ -45,13 +34,13 @@
             align-items: center;
         }
 
-        .logo final h1 {
+        .logo h1 {
             margin: 0;
             font-size: 1.8rem;
             letter-spacing: 1px;
         }
 
-        .logo final span {
+        .logo span {
             color: var(--color-terciario);
         }
 
@@ -62,28 +51,11 @@
             font-weight: bold;
         }
 
-        /* DOCUMENTACIÓN CSS: Sección Hero con tu imagen corporativa logo.jpg */
         .hero {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('logo final.jpg');
-            background-size:cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            background-color: #2a6f97;
             color: var(--blanco);
             text-align: center;
-            padding: 8rem 1rem; 
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.8); 
-        }
-
-        .hero h2 {
-            font-size: 2.8rem;
-            margin: 0 0 1rem 0;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            max-width: 800px;
-            margin: 0 auto;
-            font-weight: 500;
+            padding: 4rem 1rem;
         }
 
         .seccion-catalogos {
@@ -125,11 +97,12 @@
         .bg-alcantarillado { background-color: var(--color-secundario); }
         .bg-riego { background-color: var(--color-terciario); }
 
+        /* DOCUMENTACIÓN CSS: Control de responsividad de las imágenes */
         .producto-imagen {
             width: 100%;
-            height: 200px;         
-            object-fit: cover;     
-            background-color: #e9ecef; 
+            height: 200px;         /* Altura fija para mantener simetría */
+            object-fit: cover;     /* Recorta la imagen proporcionalmente sin deformarla */
+            background-color: #e9ecef; /* Fondo gris de carga en lo que se asignan fotos reales */
         }
 
         .lista-productos {
@@ -162,6 +135,7 @@
             margin-bottom: 0.5rem;
         }
 
+        /* Botón de Cotización vía WhatsApp */
         .btn-whatsapp {
             display: inline-flex;
             align-items: center;
@@ -169,116 +143,16 @@
             background-color: var(--verde-whatsapp);
             color: var(--blanco);
             text-decoration: none;
-            padding: 0.6rem 1rem;
+            padding: 0.5rem 1rem;
             border-radius: 4px;
             font-size: 0.85rem;
             font-weight: bold;
             transition: background 0.2s;
             text-align: center;
-            border: none;
-            cursor: pointer;
         }
 
         .btn-whatsapp:hover {
             background-color: #1ebd58;
-        }
-
-        /* POP-UP MODAL */
-        .modal {
-            display: none; 
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5); 
-            align-items: center;
-            justify-content: center;
-        }
-
-        .modal-contenido {
-            background-color: var(--blanco);
-            padding: 2rem;
-            border-radius: 8px;
-            width: 90%;
-            max-width: 450px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-            position: relative;
-            animation: entradaModal 0.3s ease-out;
-        }
-
-        @keyframes entradaModal {
-            from { transform: translateY(-30px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        .cerrar-modal {
-            position: absolute;
-            top: 1rem;
-            right: 1.2rem;
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #aaa;
-            cursor: pointer;
-        }
-
-        .cerrar-modal:hover {
-            color: #333;
-        }
-
-        .modal h3 {
-            margin-top: 0;
-            color: var(--color-oscuro);
-            border-bottom: 2px solid var(--color-primario);
-            padding-bottom: 0.5rem;
-        }
-
-        .grupo-campo {
-            margin-bottom: 1.2rem;
-        }
-
-        .grupo-campo label {
-            display: block;
-            margin-bottom: 0.4rem;
-            font-weight: bold;
-            font-size: 0.9rem;
-        }
-
-        .grupo-campo select, .grupo-campo input {
-            width: 100%;
-            padding: 0.7rem;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-
-        .btn-enviar-wa {
-            width: 100%;
-            background-color: var(--verde-whatsapp);
-            color: var(--blanco);
-            border: none;
-            padding: 0.8rem;
-            font-weight: bold;
-            font-size: 1rem;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        /* DOCUMENTACIÓN CSS: Estilos del Mapa Responsivo */
-        .mapa-contenedor {
-            width: 100%;
-            height: 250px;
-            border-radius: 6px;
-            overflow: hidden;
-            margin-top: 1rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-        }
-
-        .mapa-contenedor iframe {
-            width: 100%;
-            height: 100%;
-            border: 0;
         }
 
         footer {
@@ -325,7 +199,7 @@
 <body>
 
     <header>
-        <div class="logo final">
+        <div class="logo">
             <h1>VP<span>RIEGO</span></h1>
         </div>
         <nav>
@@ -335,8 +209,8 @@
     </header>
 
     <section class="hero">
-        <h2>VP RIEGO</h2>
-        <p>Todo en agua potable, alcantarillado y riego. Tanques, bombas de agua, válvulas, tubos y accesorios en general.</p>
+        <h2>Sistemas Profesionales de Conducción de Fluidos</h2>
+        <p>Expertos en distribución de tuberías de alta resistencia para proyectos de ingeniería y agricultura.</p>
     </section>
 
     <main class="seccion-catalogos" id="catalogos">
@@ -344,58 +218,63 @@
         
         <div class="grid-catalogos">
             
+            <!-- CATÁLOGO 1: AGUA POTABLE -->
             <div class="categoria-bloque">
                 <div class="categoria-banner bg-agua">Agua Potable</div>
-                <img src="tuberia agua.jpg" alt="Tuberías de agua potable" class="producto-imagen">
+                <!-- Marcador de imagen: Reemplazar src con tu archivo de imagen real -->
+                <img src="Tuberia agua.jpg" alt="Tuberías de agua potable" class="producto-imagen">
                 <ul class="lista-productos">
                     <li class="producto-item">
                         <div>
                             <div class="producto-nombre">Tubería PVC Presión Uniflex</div>
                             <div class="producto-detalle">Para redes matrices y uniones mecánicas</div>
                         </div>
-                        <button class="btn-whatsapp" onclick="abrirCotizador('Tubería PVC Presión Uniflex', 'Agua Potable')">Cotizar por WhatsApp</button>
+                        <!-- Enlace API WhatsApp codificado para el Producto 1 -->
+                        <a href="https://wa.me/593996541024?text=Hola%20VPRIEGO,%20me%20interesa%20cotizar%20la%20Tuber%C3%ADa%20PVC%20Presi%C3%B3n%20Uniflex%20para%20Agua%20Potable." target="_blank" class="btn-whatsapp">Cotizar por WhatsApp</a>
                     </li>
                     <li class="producto-item">
                         <div>
                             <div class="producto-nombre">Tubería PEAD (Polietileno)</div>
                             <div class="producto-detalle">Alta densidad, rollos y tramos rectos</div>
                         </div>
-                        <button class="btn-whatsapp" onclick="abrirCotizador('Tubería PEAD (Polietileno)', 'Agua Potable')">Cotizar por WhatsApp</button>
+                        <a href="mangueras agua.jpg " target="_blank" class="btn-whatsapp">Cotizar por WhatsApp</a>
                     </li>
                 </ul>
             </div>
 
+            <!-- CATÁLOGO 2: ALCANTARILLADO -->
             <div class="categoria-bloque">
                 <div class="categoria-banner bg-alcantarillado">Alcantarillado</div>
-                <img src="alcantarillado.jpg" alt="Tuberías corrugadas de alcantarillado" class="producto-imagen">
+                <img src="https://images.unsplash.com/photo-1585338107529-13afc5f02586?auto=format&fit=crop&w=400&q=80" alt="Tuberías corrugadas de alcantarillado" class="producto-imagen">
                 <ul class="lista-productos">
                     <li class="producto-item">
                         <div>
                             <div class="producto-nombre">Tubería PVC Corrugada</div>
                             <div class="producto-detalle">Estructurada para sistemas pluviales y sanitarios</div>
                         </div>
-                        <button class="btn-whatsapp" onclick="abrirCotizador('Tubería PVC Corrugada', 'Alcantarillado')">Cotizar por WhatsApp</button>
+                        <a href="https://wa.me/593996541024?text=Hola%20VPRIEGO,%20me%20interesa%20cotizar%20la%20Tuber%C3%ADa%20PVC%20Corrugada%20para%20Alcantarillado." target="_blank" class="btn-whatsapp">Cotizar por WhatsApp</a>
                     </li>
                 </ul>
             </div>
 
+            <!-- CATÁLOGO 3: RIEGO -->
             <div class="categoria-bloque">
-                <div class="categoria-banner bg-riego">Sistemas de Riego</div>
-                <img src="aspersores.jpg" alt="Sistemas de riego agrícola" class="producto-imagen">
+                <div class="categoria-banner bg-riego">Sistemas de Riego</div>	
+                <img src="aspersores.jpg "Sistemas de riego agrícola" class="producto-imagen">
                 <ul class="lista-productos">
                     <li class="producto-item">
                         <div>
                             <div class="producto-nombre">Manguera Polietileno Riego</div>
                             <div class="producto-detalle">Baja densidad, ideal para derivaciones</div>
                         </div>
-                        <button class="btn-whatsapp" onclick="abrirCotizador('Manguera Polietileno Riego', 'Sistemas de Riego')">Cotizar por WhatsApp</button>
+                        <a href="mangueras agua.jpg " target="_blank" class="btn-whatsapp">Cotizar por WhatsApp</a>
                     </li>
                     <li class="producto-item">
                         <div>
                             <div class="producto-nombre">Cinta de Goteo</div>
                             <div class="producto-detalle">Con goteros integrados a diversas distancias</div>
                         </div>
-                        <button class="btn-whatsapp" onclick="abrirCotizador('Cinta de Goteo', 'Sistemas de Riego')">Cotizar por WhatsApp</button>
+                        <a href="https://wa.me/593996541024?text=Hola%20VPRIEGO,%20me%20interesa%20cotizar%20la%20Cinta%20de%20Goteo%20para%20sistemas%20de%20riego." target="_blank" class="btn-whatsapp">Cotizar por WhatsApp</a>
                     </li>
                 </ul>
             </div>
@@ -403,56 +282,17 @@
         </div>
     </main>
 
-    <div id="modal-cotizar" class="modal">
-        <div class="modal-contenido">
-            <span class="cerrar-modal" onclick="cerrarModal()">×</span>
-            <h3 id="modal-titulo-producto">Especificaciones de Cotización</h3>
-            <p style="font-size: 0.85rem; color:#666; margin-bottom: 1.5rem;">Indícanos las dimensiones requeridas para enviar la información exacta a nuestro asesor técnico.</p>
-            
-            <form id="form-modal" onsubmit="procesarEnvioWhatsApp(event)">
-                <div class="grupo-campo">
-                    <label for="modal-diámetro">Diámetro requerido:</label>
-                    <select id="modal-diámetro" required>
-                        <option value="">-- Seleccione diámetro --</option>
-                        <option value="1/2 pulgada">1/2"</option>
-                        <option value="3/4 pulgada">3/4"</option>
-                        <option value="1 pulgada">1"</option>
-                        <option value="1 1/2 pulgadas">1 1/2"</option>
-                        <option value="2 pulgadas">2"</option>
-                        <option value="3 pulgadas">3"</option>
-                        <option value="4 pulgadas">4"</option>
-                        <option value="6 pulgadas">6"</option>
-                        <option value="Otro / No aplica">Otro / No aplica</option>
-                    </select>
-                </div>
-
-                <div class="grupo-campo">
-                    <label for="modal-cantidad">Cantidad requerida (Metros / Unidades):</label>
-                    <input type="number" id="modal-cantidad" min="1" placeholder="Ej: 150" required>
-                </div>
-
-                <button type="submit" class="btn-enviar-wa">Confirmar y Enviar a WhatsApp</button>
-            </form>
-        </div>
-    </div>
-
     <footer id="contacto">
         <div class="footer-contenido">
             <div class="footer-columna">
                 <h4>VPRIEGO</h4>
                 <p>Tu aliado estratégico en infraestructura hidráulica, alcantarillado sanitario y tecnificación de riego agrícola.</p>
             </div>
-            
             <div class="footer-columna">
                 <h4>Ubicación Principal</h4>
-                <p>Av. Oswaldo Guayasamí N4-234 y Av. Universitaria </p>
-                <p><strong>Sector Villa Vega </strong> Quito - Tumbaco</p>
-                
-                <div class="mapa-contenedor">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d880.1893460450551!2d-78.38876921580066!3d-0.21281862589552636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d591440760769f%3A0x4f7e779101336216!2sVP%20Riego-%20Tuber%C3%ADa%20de%20agua%20potable!5e1!3m2!1ses-419!2sec!4v1779230176503!5m2!1ses-419!2sec" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
+                <p>Av. Oswaldo Guayasamín N34-234 y Universitaria</p>
+                <p><strong>Sector:</strong> Villa Vega - Tumbaco</p>
             </div>
-
             <div class="footer-columna">
                 <h4>Líneas de Atención</h4>
                 <p>Celular 1: <a href="tel:0996541024">099 654 1024</a></p>
@@ -460,53 +300,9 @@
             </div>
         </div>
         <div class="footer-derechos">
-            <p>© 2026 VPRIEGO. Todos los derechos de programación reservados.</p>
+            <p>&copy; 2026 VPRIEGO. Todos los derechos de programación reservados.</p>
         </div>
     </footer>
 
-    <script>
-        let productoSeleccionado = "";
-        let categoriaSeleccionada = "";
-
-        const modal = document.getElementById("modal-cotizar");
-        const tituloModal = document.getElementById("modal-titulo-producto");
-
-        function abrirCotizador(producto, categoria) {
-            productoSeleccionado = producto;
-            categoriaSeleccionada = categoria;
-            tituloModal.innerText = `Cotizar: ${producto}`;
-            modal.style.display = "flex";
-        }
-
-        function cerrarModal() {
-            modal.style.display = "none";
-            document.getElementById("form-modal").reset(); 
-        }
-
-        function procesarEnvioWhatsApp(event) {
-            event.preventDefault(); 
-
-            const diametro = document.getElementById("modal-diámetro").value;
-            const cantidad = document.getElementById("modal-cantidad").value;
-            const numeroTelefono = "593996541024"; 
-
-            const mensaje = `Hola VPRIEGO. Deseo solicitar una cotización con los siguientes detalles:\n\n` +
-                            `• *Línea de catálogo:* ${categoriaSeleccionada}\n` +
-                            `• *Producto:* ${productoSeleccionado}\n` +
-                            `• *Diámetro:* ${diametro}\n` +
-                            `• *Cantidad:* ${cantidad} metros/unidades.\n\n` +
-                            `Quedo atento a su respuesta para la disponibilidad y formas de entrega en el sector de Tumbaco.`;
-
-            const mensajeCodificado = encodeURIComponent(mensaje);
-            window.open(`https://wa.me/${numeroTelefono}?text=${mensajeCodificado}`, '_blank');
-            cerrarModal();
-        }
-
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                cerrarModal();
-            }
-        }
-    </script>
 </body>
 </html>

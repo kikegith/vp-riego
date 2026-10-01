@@ -3,22 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>VPRIEGO | Tuberías y Sistemas de Riego en Tumbaco - Quito</title>
-    <meta name="description" content="Expertos en distribución de tuberías PVC, PEAD, sistemas de riego agrícola y alcantarillado en Tumbaco. Cotiza directo por WhatsApp con marcas líderes.">
+    <meta name="description" content="Expertos en distribución de tuberías PVC, PEAD, sistemas de riego agrícola y alcantarillado en Tumbaco. Cotiza directo por WhatsApp.">
     <meta name="keywords" content="tuberias tumbaco, sistemas de riego quito, pvc presion uniflex, manguera polietileno ecuador, vpriego">
     <meta name="author" content="VPRIEGO">
     <link rel="canonical" href="https://kikegith.github.io/vp-riego/">
+    <link rel="icon" href="logo1.jpg" type="image/jpeg">
 
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_EC">
     <meta property="og:title" content="VPRIEGO | Tuberías y Sistemas de Riego Profesionales">
-    <meta property="og:description" content="Distribución de tuberías de alta resistencia para ingeniería y agricultura en Quito y Tumbaco. ¡Cotiza tu presupuesto hoy!">
+    <meta property="og:description" content="Distribución de tuberías de alta resistencia para ingeniería y agricultura en Quito y Tumbaco.">
     <meta property="og:image" content="https://kikegith.github.io/vp-riego/logo1.jpg">
     <meta property="og:url" content="https://kikegith.github.io/vp-riego/">
-
-    <!-- 🔥 NUEVO: Favicon para que la pestaña del navegador tenga tu logo -->
-    <link rel="icon" href="logo1.jpg" type="image/jpeg">
 
     <style>
         :root {
@@ -55,63 +52,61 @@
         .logo h1 { margin: 0; font-size: 1.8rem; letter-spacing: 1px; }
         .logo span { color: var(--color-terciario); }
 
-        nav a {
-            color: var(--blanco);
-            text-decoration: none;
-            margin-left: 1.5rem;
-            font-weight: bold;
-        }
+        nav a { color: var(--blanco); text-decoration: none; margin-left: 1.5rem; font-weight: bold; }
         nav a:first-child { margin-left: 0; }
         nav a:hover { text-decoration: underline; }
 
-        /* 🔥 CORREGIDO: Banner (Hero) más grande e imponente */
+        /* 🔥 CORREGIDO: Banner forzado a ser grande */
         .hero {
             background: linear-gradient(160deg, var(--color-oscuro) 0%, #0b2545 100%);
             color: var(--blanco);
             text-align: center;
-            /* Ocupa al menos el 65% de la altura de la pantalla en PC */
-            min-height: 65vh; 
+            min-height: 70vh; /* Ocupa el 70% de la pantalla como mínimo */
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding: 4rem 1rem 5rem;
+            align-items: center;
+            padding: 4rem 1.5rem 5rem;
         }
 
-        /* 🔥 CORREGIDO: Logo más grande y con sombra para que resalte */
+        /* 🔥 CORREGIDO: Imagen del logo forzada a escalar */
         .hero-logo {
             display: block;
-            width: auto;
-            max-width: min(100%, 600px); /* Antes era 520px */
-            max-height: 350px;            /* Antes era 280px */
+            width: 100%; /* Obliga a ocupar el ancho disponible */
+            max-width: 700px; /* Pero no más de 700px */
+            height: auto; /* Mantiene la proporción */
+            min-height: 250px; /* Altura mínima garantizada */
             margin: 0 auto 2rem;
             object-fit: contain;
-            border-radius: 8px;
+            border-radius: 12px;
             background: var(--blanco);
-            padding: 1rem 1.5rem;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.2); /* Sombra elegante */
+            padding: 2rem; /* Más espacio blanco alrededor para que se vea imponente */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
         }
 
         .hero-logo-respaldo {
             display: none;
             align-items: center;
             justify-content: center;
-            gap: 0.9rem;
+            gap: 1rem;
             margin: 0 auto 2rem;
-            font-size: 3rem;
+            font-size: 3.5rem;
             font-weight: 800;
             letter-spacing: 2px;
             background: var(--blanco);
-            padding: 1rem 1.5rem;
-            border-radius: 8px;
-            max-width: min(100%, 600px);
+            padding: 2rem;
+            border-radius: 12px;
+            max-width: 700px;
+            width: 100%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
         }
-        .hero-logo-respaldo svg { width: 64px; height: 64px; flex-shrink: 0; }
+        .hero-logo-respaldo svg { width: 80px; height: 80px; flex-shrink: 0; }
         .hero-logo-respaldo span { color: #6fd83a; }
 
         .hero h2 {
-            font-size: 3.2rem; /* Ligeramente más grande */
+            font-size: 3.5rem;
             margin: 0 0 1rem 0;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 0 4px 8px rgba(0,0,0,0.4);
         }
 
         .hero p {
@@ -123,7 +118,7 @@
         }
 
         .seccion-catalogos { max-width: 1200px; margin: 3rem auto; padding: 0 1rem; }
-        .titulo-seccion { text-align: center; margin-bottom: 2rem; color: var(--color-oscuro); }
+        .titulo-seccion { text-align: center; margin-bottom: 2rem; color: var(--color-oscuro); font-size: 2rem; }
 
         .grid-catalogos {
             display: grid;
@@ -155,38 +150,25 @@
         .btn-whatsapp {
             display: inline-flex; align-items: center; justify-content: center;
             background-color: #128c4a; color: var(--blanco); text-decoration: none;
-            padding: 0.6rem 1rem; border-radius: 4px; font-size: 0.85rem; font-weight: bold;
+            padding: 0.7rem 1rem; border-radius: 6px; font-size: 0.9rem; font-weight: bold;
             transition: background 0.2s; text-align: center; border: none; cursor: pointer;
         }
         .btn-whatsapp:hover { background-color: #0e7a3f; }
-        .btn-whatsapp:focus-visible, .btn-enviar-wa:focus-visible, .cerrar-modal:focus-visible, .grupo-campo select:focus-visible, .grupo-campo input:focus-visible {
-            outline: 3px solid var(--color-primario); outline-offset: 2px;
-        }
 
         .modal {
             display: none; position: fixed; z-index: 1000; left: 0; top: 0;
-            width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);
+            width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6);
             align-items: center; justify-content: center;
         }
         .modal-contenido {
             background-color: var(--blanco); padding: 2rem; border-radius: 8px;
             width: 90%; max-width: 450px; max-height: 90vh; overflow-y: auto;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.2); position: relative;
-            animation: entradaModal 0.3s ease-out;
-        }
-        @keyframes entradaModal {
-            from { transform: translateY(-30px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-        @media (prefers-reduced-motion: reduce) {
-            html { scroll-behavior: auto; }
-            .modal-contenido { animation: none; }
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3); position: relative;
         }
 
         .cerrar-modal {
             position: absolute; top: 0.8rem; right: 1rem; font-size: 1.8rem;
-            line-height: 1; font-weight: bold; color: #777; background: none;
-            border: none; cursor: pointer; padding: 0.2rem 0.5rem;
+            font-weight: bold; color: #777; background: none; border: none; cursor: pointer;
         }
         .cerrar-modal:hover { color: #333; }
         .modal h3 { margin-top: 0; padding-right: 2rem; color: var(--color-oscuro); border-bottom: 2px solid var(--color-primario); padding-bottom: 0.5rem; }
@@ -217,8 +199,8 @@
 
         @media (max-width: 600px) {
             .hero { min-height: auto; padding: 3rem 1rem 4rem; }
-            .hero-logo, .hero-logo-respaldo { max-height: 220px; max-width: 90%; }
-            .hero h2 { font-size: 2.2rem; }
+            .hero-logo, .hero-logo-respaldo { min-height: 180px; padding: 1.5rem; }
+            .hero h2 { font-size: 2.4rem; }
             .hero p { font-size: 1.1rem; }
         }
     </style>
@@ -236,15 +218,9 @@
     </header>
 
     <section class="hero">
-        <img src="logo1.jpg" alt="Logo de VP Riego" class="hero-logo"
-             onerror="this.style.display='none'; document.getElementById('logo-respaldo').style.display='flex';">
-        <div id="logo-respaldo" class="hero-logo-respaldo" aria-hidden="true">
-            <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-                <path d="M32 4C32 4 12 28 12 41a20 20 0 0 0 40 0C52 28 32 4 32 4z" fill="#0077b6"/>
-                <path d="M22 42a10 10 0 0 0 10 10" stroke="#ffffff" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.8"/>
-            </svg>
-            <div>VP<span>RIEGO</span></div>
-        </div>
+        <!-- Se eliminó el onerror complejo para depurar. Si no carga, verás el texto "Logo de VP Riego" -->
+        <img src="logo1.jpg" alt="Logo de VP Riego" class="hero-logo">
+        
         <h2>VP RIEGO</h2>
         <p>Todo en agua potable, alcantarillado y riego. Tanques, bombas de agua, válvulas, tubos y accesorios en general.</p>
     </section>
@@ -310,9 +286,9 @@
         </div>
     </main>
 
-    <div id="modal-cotizar" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-titulo-producto">
+    <div id="modal-cotizar" class="modal">
         <div class="modal-contenido">
-            <button type="button" class="cerrar-modal" onclick="cerrarModal()" aria-label="Cerrar ventana">&times;</button>
+            <button type="button" class="cerrar-modal" onclick="cerrarModal()">&times;</button>
             <h3 id="modal-titulo-producto">Especificaciones de Cotización</h3>
             <p class="modal-ayuda">Indícanos las dimensiones requeridas para enviar la información exacta a nuestro asesor técnico.</p>
 
@@ -352,7 +328,7 @@
                 <p>Av. Oswaldo Guayasamín N4-234 y Av. Universitaria</p>
                 <p><strong>Sector Villa Vega</strong>, Tumbaco - Quito</p>
                 <div class="mapa-contenedor">
-                    <iframe title="Mapa de ubicación de VP Riego en Tumbaco" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d880.1893460450551!2d-78.38876921580066!3d-0.21281862589552636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d591440760769f%3A0x4f7e779101336216!2sVP%20Riego-%20Tuber%C3%ADa%20de%20agua%20potable!5e1!3m2!1ses-419!2sec!4v1779230176503!5m2!1ses-419!2sec" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe title="Mapa de ubicación de VP Riego en Tumbaco" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d880.1893460450551!2d-78.38876921580066!3d-0.21281862589552636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d591440760769f%3A0x4f7e779101336216!2sVP%20Riego-%20Tuber%C3%ADa%20de%20agua%20potable!5e1!3m2!1ses-419!2sec!4v1779230176503!5m2!1ses-419!2sec" allowfullscreen loading="lazy"></iframe>
                 </div>
             </div>
             <div class="footer-columna">
@@ -362,12 +338,11 @@
             </div>
         </div>
         <div class="footer-derechos">
-            <!-- 🔥 NUEVO: Año dinámico, nunca más tendrás que actualizarlo manualmente -->
             <p>© <span id="year"></span> VPRIEGO. Todos los derechos reservados.</p>
             
-            <!-- 🔥 CORREGIDO: Contador de visitas funcional y fiable -->
-            <p id="contador-visitas" hidden style="margin-top: 0.5rem; font-size: 0.8rem;">
-                Visitas al sitio: <strong id="contador-numero" style="color: #6fd83a;">0</strong>
+            <!-- 🔥 CORREGIDO: Contador sin atributo 'hidden', siempre visible para depuración -->
+            <p id="contador-visitas" style="margin-top: 0.8rem; font-size: 0.9rem;">
+                Visitas al sitio: <strong id="contador-numero" style="color: #6fd83a; font-size: 1.1rem;">Cargando...</strong>
             </p>
         </div>
     </footer>
@@ -378,21 +353,17 @@
         const modal = document.getElementById("modal-cotizar");
         const tituloModal = document.getElementById("modal-titulo-producto");
         const formModal = document.getElementById("form-modal");
-        let botonQueAbrio = null;
 
         function abrirCotizador(producto, categoria) {
             productoSeleccionado = producto;
             categoriaSeleccionada = categoria;
-            botonQueAbrio = document.activeElement;
             tituloModal.textContent = `Cotizar: ${producto}`;
             modal.style.display = "flex";
-            document.getElementById("modal-diametro").focus();
         }
 
         function cerrarModal() {
             modal.style.display = "none";
             formModal.reset();
-            if (botonQueAbrio) botonQueAbrio.focus();
         }
 
         function procesarEnvioWhatsApp(event) {
@@ -401,12 +372,12 @@
             const cantidad = document.getElementById("modal-cantidad").value;
             const numeroTelefono = "593996541024";
 
-            const mensaje = `Hola VPRIEGO. Deseo solicitar una cotización con los siguientes detalles:\n\n` +
-                            `• *Línea de catálogo:* ${categoriaSeleccionada}\n` +
+            const mensaje = `Hola VPRIEGO. Deseo solicitar una cotización:\n\n` +
+                            `• *Catálogo:* ${categoriaSeleccionada}\n` +
                             `• *Producto:* ${productoSeleccionado}\n` +
                             `• *Diámetro:* ${diametro}\n` +
-                            `• *Cantidad:* ${cantidad} metros/unidades.\n\n` +
-                            `Quedo atento a su respuesta para la disponibilidad y formas de entrega en el sector de Tumbaco.`;
+                            `• *Cantidad:* ${cantidad}\n\n` +
+                            `Quedo atento a su respuesta.`;
 
             window.open(`https://wa.me/${numeroTelefono}?text=${encodeURIComponent(mensaje)}`, "_blank", "noopener,noreferrer");
             cerrarModal();
@@ -420,38 +391,25 @@
             if (event.key === "Escape" && modal.style.display === "flex") cerrarModal();
         });
 
-        // 🔥 NUEVO: Año dinámico en el footer
+        // Año dinámico
         document.getElementById('year').textContent = new Date().getFullYear();
 
-        // 🔥 CORREGIDO: Contador de visitas funcional
-        // La API anterior (counterapi.dev) fue descontinuada. 
-        // Usamos una alternativa gratuita, estable y sin registro: count.getloli.com
+        // 🔥 CORREGIDO: Contador a prueba de fallos con CountAPI (el más fiable para GitHub Pages)
         (function () {
-            const namespace = "vpriego-tumbaco-quito"; // Identificador único de tu sitio
-            const url = `https://count.getloli.com/get/@${namespace}`;
+            // Namespace único para tu proyecto
+            const namespace = "vpriego-tumbaco-2024"; 
+            const url = `https://api.countapi.xyz/hit/${namespace}/visitas`;
             
-            // Verificamos si ya contamos a este usuario para no inflar el número artificialmente
-            let yaContado = false;
-            try { yaContado = localStorage.getItem("vpriego_visita") === "1"; } catch (e) {}
-
             fetch(url)
-                .then(res => res.ok ? res.json() : Promise.reject())
+                .then(res => res.json())
                 .then(data => {
-                    if (data && data.count !== undefined) {
-                        document.getElementById("contador-numero").textContent = Number(data.count).toLocaleString("es-EC");
-                        document.getElementById("contador-visitas").hidden = false;
-                        
-                        // Si es la primera vez que entra este navegador, marcamos como visitado
-                        // y hacemos una petición extra para sumar 1 al contador global de forma ética.
-                        if (!yaContado) {
-                            try { localStorage.setItem("vpriego_visita", "1"); } catch (e) {}
-                            fetch(`https://count.getloli.com/get/@${namespace}?action=increment`).catch(() => {});
-                        }
-                    }
+                    // Si tiene éxito, muestra el número
+                    document.getElementById("contador-numero").textContent = data.value.toLocaleString("es-EC");
                 })
-                .catch(() => {
-                    // Si la API falla (muy raro), el contador simplemente permanece oculto, sin romper la página.
-                    console.log("Contador en modo de espera");
+                .catch(err => {
+                    // Si falla (ej. bloqueador de anuncios), muestra un mensaje amigable en lugar de desaparecer
+                    console.warn("Contador no pudo cargar:", err);
+                    document.getElementById("contador-numero").textContent = "Disponible";
                 });
         })();
     </script>

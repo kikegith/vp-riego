@@ -85,18 +85,22 @@
             text-decoration: underline;
         }
 
-        /* Sección Hero con la imagen corporativa */
+        /* Sección Hero: el logo se muestra completo (sin recortes) sobre fondo sólido */
         .hero {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('logo-final.jpg');
-            /* CORREGIDO: había dos declaraciones de background-size (contain y cover); se dejó solo cover */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-color: var(--color-oscuro); /* color de respaldo si la imagen no carga */
+            background: linear-gradient(160deg, var(--color-oscuro) 0%, #0b2545 100%);
             color: var(--blanco);
             text-align: center;
-            padding: 8rem 1rem;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+            padding: 3rem 1rem 4rem;
+        }
+
+        .hero-logo {
+            display: block;
+            width: auto;
+            max-width: min(100%, 520px);
+            max-height: 280px;
+            margin: 0 auto 1.5rem;
+            object-fit: contain;
+            border-radius: 8px;
         }
 
         .hero h2 {
@@ -387,7 +391,8 @@
         }
 
         @media (max-width: 600px) {
-            .hero { padding: 5rem 1rem; }
+            .hero { padding: 2rem 1rem 3rem; }
+            .hero-logo { max-height: 200px; }
             .hero h2 { font-size: 2.1rem; }
             .hero p { font-size: 1.1rem; }
         }
@@ -407,6 +412,7 @@
     </header>
 
     <section class="hero">
+        <img src="logo-final.jpg" alt="Logo de VP Riego" class="hero-logo">
         <h2>VP RIEGO</h2>
         <p>Todo en agua potable, alcantarillado y riego. Tanques, bombas de agua, válvulas, tubos y accesorios en general.</p>
     </section>

@@ -1,21 +1,57 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-EC">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VPRIEGO | Tuberías y Sistemas de Riego en Tumbaco - Quito</title>
-    <meta name="description" content="Expertos en distribución de tuberías PVC, PEAD, sistemas de riego agrícola y alcantarillado en Tumbaco. Cotiza directo por WhatsApp.">
-    <meta name="keywords" content="tuberias tumbaco, sistemas de riego quito, pvc presion uniflex, manguera polietileno ecuador, vpriego">
+    
+    <!-- 🔥 SEO OPTIMIZADO -->
+    <title>VPRIEGO | Tuberías PVC, PEAD y Sistemas de Riego en Tumbaco, Quito</title>
+    <meta name="description" content="Distribuidor de tuberías PVC, PEAD, accesorios y sistemas de riego agrícola en Tumbaco y Quito. Agua potable, alcantarillado y riego por goteo. ¡Cotiza por WhatsApp!">
+    <meta name="keywords" content="tuberías tumbaco, sistemas de riego quito, pvc presión uniflex, manguera polietileno ecuador, vpriego, alcantarillado tumbaco, riego agrícola">
+    <meta name="robots" content="index, follow">
     <meta name="author" content="VPRIEGO">
     <link rel="canonical" href="https://kikegith.github.io/vp-riego/">
-    <link rel="icon" href="logo1.jpg" type="image/jpg">
+    <link rel="icon" href="logo1.png" type="image/png"> <!-- Recomendado cambiar a .png -->
 
+    <!-- Open Graph (Para cuando compartas el link en WhatsApp/Facebook) -->
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_EC">
-    <meta property="og:title" content="VPRIEGO | Tuberías y Sistemas de Riego Profesionales">
-    <meta property="og:description" content="Distribución de tuberías de alta resistencia para ingeniería y agricultura en Quito y Tumbaco.">
+    <meta property="og:title" content="VPRIEGO | Tuberías y Sistemas de Riego en Tumbaco">
+    <meta property="og:description" content="Venta y distribución de tuberías de alta resistencia para ingeniería y agricultura en Quito y Tumbaco.">
     <meta property="og:image" content="https://kikegith.github.io/vp-riego/logo1.jpg">
     <meta property="og:url" content="https://kikegith.github.io/vp-riego/">
+
+    <!-- 🔥 DATOS ESTRUCTURADOS (SCHEMA.ORG) PARA GOOGLE MAPS Y BÚSQUEDA LOCAL -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "name": "VPRIEGO - Tuberías y Sistemas de Riego",
+      "image": "https://kikegith.github.io/vp-riego/logo1.jpg",
+      "telephone": "+593996541024",
+      "url": "https://kikegith.github.io/vp-riego/",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Oswaldo Guayasamín N4-234 y Av. Universitaria, Sector Villa Vega",
+        "addressLocality": "Tumbaco, Quito",
+        "addressRegion": "Pichincha",
+        "postalCode": "170150",
+        "addressCountry": "EC"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -0.212818,
+        "longitude": -78.388769
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      },
+      "priceRange": "$$"
+    }
+    </script>
 
     <style>
         :root {
@@ -36,6 +72,7 @@
             padding: 0;
             background-color: var(--color-fondo);
             color: #333;
+            line-height: 1.6;
         }
 
         header {
@@ -49,19 +86,18 @@
             gap: 1rem;
         }
 
-        .logo h1 { margin: 0; font-size: 1.8rem; letter-spacing: 1px; }
-        .logo span { color: var(--color-terciario); }
+        .logo h1 { margin: 0; font-size: 1.5rem; letter-spacing: 1px; line-height: 1.2; }
+        .logo h1 span { color: var(--color-terciario); display: block; font-size: 0.9rem; font-weight: normal; letter-spacing: 0.5px; margin-top: 4px; }
 
         nav a { color: var(--blanco); text-decoration: none; margin-left: 1.5rem; font-weight: bold; }
         nav a:first-child { margin-left: 0; }
         nav a:hover { text-decoration: underline; }
 
-        /* 🔥 CORREGIDO: Banner forzado a ser grande */
         .hero {
             background: linear-gradient(160deg, var(--color-oscuro) 0%, #0b2545 100%);
             color: var(--blanco);
             text-align: center;
-            min-height: 70vh; /* Ocupa el 70% de la pantalla como mínimo */
+            min-height: 70vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -69,52 +105,31 @@
             padding: 4rem 1.5rem 5rem;
         }
 
-        /* 🔥 CORREGIDO: Imagen del logo forzada a escalar */
         .hero-logo {
             display: block;
-            width: 100%; /* Obliga a ocupar el ancho disponible */
-            max-width: 700px; /* Pero no más de 700px */
-            height: auto; /* Mantiene la proporción */
-            min-height: 250px; /* Altura mínima garantizada */
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            min-height: 200px;
             margin: 0 auto 2rem;
             object-fit: contain;
             border-radius: 12px;
             background: var(--blanco);
-            padding: 2rem; /* Más espacio blanco alrededor para que se vea imponente */
-            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-        }
-
-        .hero-logo-respaldo {
-            display: none;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-            margin: 0 auto 2rem;
-            font-size: 3.5rem;
-            font-weight: 800;
-            letter-spacing: 2px;
-            background: var(--blanco);
             padding: 2rem;
-            border-radius: 12px;
-            max-width: 700px;
-            width: 100%;
             box-shadow: 0 10px 30px rgba(0,0,0,0.4);
         }
-        .hero-logo-respaldo svg { width: 80px; height: 80px; flex-shrink: 0; }
-        .hero-logo-respaldo span { color: #6fd83a; }
 
         .hero h2 {
-            font-size: 3.5rem;
+            font-size: 2.8rem;
             margin: 0 0 1rem 0;
             text-shadow: 0 4px 8px rgba(0,0,0,0.4);
         }
 
         .hero p {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             max-width: 800px;
             margin: 0 auto;
             font-weight: 500;
-            line-height: 1.6;
         }
 
         .seccion-catalogos { max-width: 1200px; margin: 3rem auto; padding: 0 1rem; }
@@ -199,9 +214,10 @@
 
         @media (max-width: 600px) {
             .hero { min-height: auto; padding: 3rem 1rem 4rem; }
-            .hero-logo, .hero-logo-respaldo { min-height: 180px; padding: 1.5rem; }
-            .hero h2 { font-size: 2.4rem; }
+            .hero-logo { min-height: 180px; padding: 1.5rem; }
+            .hero h2 { font-size: 2rem; }
             .hero p { font-size: 1.1rem; }
+            .logo h1 { font-size: 1.3rem; text-align: center; }
         }
     </style>
 </head>
@@ -209,7 +225,8 @@
 
     <header>
         <div class="logo">
-            <h1>VP<span>RIEGO</span></h1>
+            <!-- 🔥 H1 OPTIMIZADO PARA SEO LOCAL -->
+            <h1>VP<span>RIEGO</span> <span style="font-size: 0.8rem; color: #ccc; display: block; margin-top: 5px;">Tuberías y Riego en Tumbaco, Quito</span></h1>
         </div>
         <nav aria-label="Navegación principal">
             <a href="#catalogos">Catálogos</a>
@@ -218,11 +235,9 @@
     </header>
 
     <section class="hero">
-        <!-- Se eliminó el onerror complejo para depurar. Si no carga, verás el texto "Logo de VP Riego" -->
-        <img src="logo1.jpg" alt="Logo de VP Riego" class="hero-logo">
-        
-        <h2>VP RIEGO</h2>
-        <p>Todo en agua potable, alcantarillado y riego. Tanques, bombas de agua, válvulas, tubos y accesorios en general.</p>
+        <img src="logo1.jpg" alt="Logo de VPRIEGO, distribuidor de tuberías y sistemas de riego en Tumbaco" class="hero-logo">
+        <h2>Soluciones en Agua, Alcantarillado y Riego</h2>
+        <p>Expertos en distribución de tuberías PVC, PEAD, tanques, bombas de agua, válvulas y accesorios para agricultura e ingeniería en Tumbaco y todo Quito.</p>
     </section>
 
     <main class="seccion-catalogos" id="catalogos">
@@ -230,7 +245,7 @@
         <div class="grid-catalogos">
             <div class="categoria-bloque">
                 <div class="categoria-banner bg-agua">Agua Potable</div>
-                <img src="tuberia-agua.jpg" alt="Tuberías de agua potable" class="producto-imagen" loading="lazy"> 
+                <img src="tuberia-agua.jpg" alt="Tuberías PVC y PEAD para agua potable en Tumbaco" class="producto-imagen" loading="lazy"> 
                 <ul class="lista-productos">
                     <li class="producto-item">
                         <div>
@@ -251,7 +266,7 @@
 
             <div class="categoria-bloque">
                 <div class="categoria-banner bg-alcantarillado">Alcantarillado</div>
-                <img src="alcantarillado.jpg" alt="Tuberías corrugadas de alcantarillado" class="producto-imagen" loading="lazy">
+                <img src="alcantarillado.jpg" alt="Tuberías corrugadas para alcantarillado sanitario y pluvial en Quito" class="producto-imagen" loading="lazy">
                 <ul class="lista-productos">
                     <li class="producto-item">
                         <div>
@@ -265,12 +280,12 @@
 
             <div class="categoria-bloque">
                 <div class="categoria-banner bg-riego">Sistemas de Riego</div>
-                <img src="aspersores.jpg" alt="Sistemas de riego agrícola" class="producto-imagen" loading="lazy">
+                <img src="aspersores.jpg" alt="Sistemas de riego agrícola, goteo y aspersión en Tumbaco" class="producto-imagen" loading="lazy">
                 <ul class="lista-productos">
                     <li class="producto-item">
                         <div>
                             <div class="producto-nombre">Manguera Polietileno Riego</div>
-                            <div class="producto-detalle">Baja densidad, ideal para derivaciones</div>
+                            <div class="producto-detalle">Baja densidad, ideal para derivaciones agrícolas</div>
                         </div>
                         <button type="button" class="btn-whatsapp" onclick="abrirCotizador('Manguera Polietileno Riego', 'Sistemas de Riego')">Cotizar por WhatsApp</button>
                     </li>
@@ -286,9 +301,9 @@
         </div>
     </main>
 
-    <div id="modal-cotizar" class="modal">
+    <div id="modal-cotizar" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-titulo-producto">
         <div class="modal-contenido">
-            <button type="button" class="cerrar-modal" onclick="cerrarModal()">&times;</button>
+            <button type="button" class="cerrar-modal" onclick="cerrarModal()" aria-label="Cerrar modal">&times;</button>
             <h3 id="modal-titulo-producto">Especificaciones de Cotización</h3>
             <p class="modal-ayuda">Indícanos las dimensiones requeridas para enviar la información exacta a nuestro asesor técnico.</p>
 
@@ -321,26 +336,25 @@
         <div class="footer-contenido">
             <div class="footer-columna">
                 <h4>VPRIEGO</h4>
-                <p>Tu aliado estratégico en infraestructura hidráulica, alcantarillado sanitario y tecnificación de riego agrícola.</p>
+                <p>Tu aliado estratégico en infraestructura hidráulica, alcantarillado sanitario y tecnificación de riego agrícola en Tumbaco y Quito.</p>
             </div>
             <div class="footer-columna">
                 <h4>Ubicación Principal</h4>
                 <p>Av. Oswaldo Guayasamín N4-234 y Av. Universitaria</p>
                 <p><strong>Sector Villa Vega</strong>, Tumbaco - Quito</p>
                 <div class="mapa-contenedor">
-                    <iframe title="Mapa de ubicación de VP Riego en Tumbaco" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d880.1893460450551!2d-78.38876921580066!3d-0.21281862589552636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d591440760769f%3A0x4f7e779101336216!2sVP%20Riego-%20Tuber%C3%ADa%20de%20agua%20potable!5e1!3m2!1ses-419!2sec!4v1779230176503!5m2!1ses-419!2sec" allowfullscreen loading="lazy"></iframe>
+                    <iframe title="Mapa de ubicación de VP Riego en Tumbaco, Quito" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d880.1893460450551!2d-78.38876921580066!3d-0.21281862589552636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d591440760769f%3A0x4f7e779101336216!2sVP%20Riego-%20Tuber%C3%ADa%20de%20agua%20potable!5e1!3m2!1ses-419!2sec!4v1779230176503!5m2!1ses-419!2sec" allowfullscreen loading="lazy"></iframe>
                 </div>
             </div>
             <div class="footer-columna">
                 <h4>Líneas de Atención</h4>
                 <p>Celular 1: <a href="tel:+593996541024">099 654 1024</a></p>
                 <p>Celular 2: <a href="tel:+593996600715">099 660 0715</a></p>
+                <p style="margin-top: 1rem;"><em>Atendemos pedidos con entrega en Tumbaco, Cumbayá, Los Chillos y Quito.</em></p>
             </div>
         </div>
         <div class="footer-derechos">
             <p>© <span id="year"></span> VPRIEGO. Todos los derechos reservados.</p>
-            
-            <!-- 🔥 CORREGIDO: Contador sin atributo 'hidden', siempre visible para depuración -->
             <p id="contador-visitas" style="margin-top: 0.8rem; font-size: 0.9rem;">
                 Visitas al sitio: <strong id="contador-numero" style="color: #6fd83a; font-size: 1.1rem;">Cargando...</strong>
             </p>
@@ -391,23 +405,17 @@
             if (event.key === "Escape" && modal.style.display === "flex") cerrarModal();
         });
 
-        // Año dinámico
         document.getElementById('year').textContent = new Date().getFullYear();
 
-        // 🔥 CORREGIDO: Contador a prueba de fallos con CountAPI (el más fiable para GitHub Pages)
         (function () {
-            // Namespace único para tu proyecto
             const namespace = "vpriego-tumbaco-2024"; 
             const url = `https://api.countapi.xyz/hit/${namespace}/visitas`;
-            
             fetch(url)
                 .then(res => res.json())
                 .then(data => {
-                    // Si tiene éxito, muestra el número
                     document.getElementById("contador-numero").textContent = data.value.toLocaleString("es-EC");
                 })
                 .catch(err => {
-                    // Si falla (ej. bloqueador de anuncios), muestra un mensaje amigable en lugar de desaparecer
                     console.warn("Contador no pudo cargar:", err);
                     document.getElementById("contador-numero").textContent = "Disponible";
                 });

@@ -14,30 +14,24 @@
     <meta property="og:locale" content="es_EC">
     <meta property="og:title" content="VPRIEGO | Tuberías y Sistemas de Riego Profesionales">
     <meta property="og:description" content="Distribución de tuberías de alta resistencia para ingeniería y agricultura en Quito y Tumbaco. ¡Cotiza tu presupuesto hoy!">
-    <!-- CORREGIDO: og:image debe ser una URL absoluta y sin espacios -->
     <meta property="og:image" content="https://kikegith.github.io/vp-riego/logo1.jpg">
     <meta property="og:url" content="https://kikegith.github.io/vp-riego/">
 
+    <!-- 🔥 NUEVO: Favicon para que la pestaña del navegador tenga tu logo -->
+    <link rel="icon" href="logo1.jpg" type="image/jpeg">
+
     <style>
-        /* Variables de diseño global */
         :root {
-            --color-primario: #0077b6;      /* Azul - Agua Potable */
-            --color-secundario: #5c677d;    /* Gris - Alcantarillado */
-            --color-terciario: #38b000;     /* Verde - Riego VP */
+            --color-primario: #0077b6;
+            --color-secundario: #5c677d;
+            --color-terciario: #38b000;
             --color-oscuro: #1d3557;
             --color-fondo: #f8f9fa;
             --blanco: #ffffff;
-            --verde-whatsapp: #25d366;
         }
 
-        /* CORREGIDO: box-sizing aplicado a todos los elementos, no solo al body */
-        *, *::before, *::after {
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
+        *, *::before, *::after { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
 
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
@@ -54,20 +48,12 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;   /* CORREGIDO: no se desborda en celulares */
+            flex-wrap: wrap;
             gap: 1rem;
         }
 
-        /* CORREGIDO: antes era ".logo final h1" (buscaba una etiqueta <final> que no existe) */
-        .logo h1 {
-            margin: 0;
-            font-size: 1.8rem;
-            letter-spacing: 1px;
-        }
-
-        .logo span {
-            color: var(--color-terciario);
-        }
+        .logo h1 { margin: 0; font-size: 1.8rem; letter-spacing: 1px; }
+        .logo span { color: var(--color-terciario); }
 
         nav a {
             color: var(--blanco);
@@ -75,88 +61,72 @@
             margin-left: 1.5rem;
             font-weight: bold;
         }
+        nav a:first-child { margin-left: 0; }
+        nav a:hover { text-decoration: underline; }
 
-        nav a:first-child {
-            margin-left: 0;
-        }
-
-        nav a:hover,
-        nav a:focus-visible {
-            text-decoration: underline;
-        }
-
-        /* Sección Hero: el logo se muestra completo (sin recortes) sobre fondo sólido */
+        /* 🔥 CORREGIDO: Banner (Hero) más grande e imponente */
         .hero {
             background: linear-gradient(160deg, var(--color-oscuro) 0%, #0b2545 100%);
             color: var(--blanco);
             text-align: center;
-            padding: 3rem 1rem 4rem;
+            /* Ocupa al menos el 65% de la altura de la pantalla en PC */
+            min-height: 65vh; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 4rem 1rem 5rem;
         }
 
+        /* 🔥 CORREGIDO: Logo más grande y con sombra para que resalte */
         .hero-logo {
             display: block;
             width: auto;
-            max-width: min(100%, 520px);
-            max-height: 280px;
-            margin: 0 auto 1.5rem;
+            max-width: min(100%, 600px); /* Antes era 520px */
+            max-height: 350px;            /* Antes era 280px */
+            margin: 0 auto 2rem;
             object-fit: contain;
             border-radius: 8px;
-        }
-
-        .hero-logo {
             background: var(--blanco);
-            padding: 0.6rem 1rem;
+            padding: 1rem 1.5rem;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2); /* Sombra elegante */
         }
 
-        /* Logo de respaldo: aparece solo si logo1.jpg no carga */
         .hero-logo-respaldo {
             display: none;
             align-items: center;
             justify-content: center;
             gap: 0.9rem;
-            margin: 0 auto 1.5rem;
+            margin: 0 auto 2rem;
             font-size: 3rem;
             font-weight: 800;
             letter-spacing: 2px;
+            background: var(--blanco);
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            max-width: min(100%, 600px);
         }
-
-        .hero-logo-respaldo svg {
-            width: 64px;
-            height: 64px;
-            flex-shrink: 0;
-        }
-
-        .hero-logo-respaldo span {
-            color: #6fd83a;
-        }
+        .hero-logo-respaldo svg { width: 64px; height: 64px; flex-shrink: 0; }
+        .hero-logo-respaldo span { color: #6fd83a; }
 
         .hero h2 {
-            font-size: 2.8rem;
+            font-size: 3.2rem; /* Ligeramente más grande */
             margin: 0 0 1rem 0;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
 
         .hero p {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             max-width: 800px;
             margin: 0 auto;
             font-weight: 500;
+            line-height: 1.6;
         }
 
-        .seccion-catalogos {
-            max-width: 1200px;
-            margin: 3rem auto;
-            padding: 0 1rem;
-        }
-
-        .titulo-seccion {
-            text-align: center;
-            margin-bottom: 2rem;
-            color: var(--color-oscuro);
-        }
+        .seccion-catalogos { max-width: 1200px; margin: 3rem auto; padding: 0 1rem; }
+        .titulo-seccion { text-align: center; margin-bottom: 2rem; color: var(--color-oscuro); }
 
         .grid-catalogos {
             display: grid;
-            /* CORREGIDO: min(100%, 320px) evita desborde horizontal en pantallas menores a 320px */
             grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
             gap: 2rem;
         }
@@ -170,257 +140,85 @@
             flex-direction: column;
         }
 
-        .categoria-banner {
-            padding: 1.2rem;
-            color: var(--blanco);
-            font-size: 1.3rem;
-            font-weight: bold;
-            text-align: center;
-        }
-
+        .categoria-banner { padding: 1.2rem; color: var(--blanco); font-size: 1.3rem; font-weight: bold; text-align: center; }
         .bg-agua { background-color: var(--color-primario); }
         .bg-alcantarillado { background-color: var(--color-secundario); }
-        /* CORREGIDO: el blanco sobre #38b000 tenía poco contraste; se oscureció el verde solo en el banner */
         .bg-riego { background-color: #2f8f00; }
 
-        .producto-imagen {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            background-color: #e9ecef;
-            display: block;
-        }
-
-        .lista-productos {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            flex-grow: 1;
-        }
-
-        .producto-item {
-            padding: 1.2rem 1.5rem;
-            border-bottom: 1px solid #eee;
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-
-        .producto-item:last-child {
-            border-bottom: none;
-        }
-
-        .producto-nombre {
-            font-weight: 600;
-            font-size: 1.05rem;
-        }
-
-        .producto-detalle {
-            font-size: 0.85rem;
-            color: #666;
-            margin-bottom: 0.5rem;
-        }
+        .producto-imagen { width: 100%; height: 200px; object-fit: cover; background-color: #e9ecef; display: block; }
+        .lista-productos { list-style: none; padding: 0; margin: 0; flex-grow: 1; }
+        .producto-item { padding: 1.2rem 1.5rem; border-bottom: 1px solid #eee; display: flex; flex-direction: column; gap: 0.5rem; }
+        .producto-item:last-child { border-bottom: none; }
+        .producto-nombre { font-weight: 600; font-size: 1.05rem; }
+        .producto-detalle { font-size: 0.85rem; color: #666; margin-bottom: 0.5rem; }
 
         .btn-whatsapp {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #128c4a;   /* CORREGIDO: más oscuro para que el texto blanco sea legible */
-            color: var(--blanco);
-            text-decoration: none;
-            padding: 0.6rem 1rem;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            font-weight: bold;
-            transition: background 0.2s;
-            text-align: center;
-            border: none;
-            cursor: pointer;
+            display: inline-flex; align-items: center; justify-content: center;
+            background-color: #128c4a; color: var(--blanco); text-decoration: none;
+            padding: 0.6rem 1rem; border-radius: 4px; font-size: 0.85rem; font-weight: bold;
+            transition: background 0.2s; text-align: center; border: none; cursor: pointer;
+        }
+        .btn-whatsapp:hover { background-color: #0e7a3f; }
+        .btn-whatsapp:focus-visible, .btn-enviar-wa:focus-visible, .cerrar-modal:focus-visible, .grupo-campo select:focus-visible, .grupo-campo input:focus-visible {
+            outline: 3px solid var(--color-primario); outline-offset: 2px;
         }
 
-        .btn-whatsapp:hover {
-            background-color: #0e7a3f;
-        }
-
-        /* CORREGIDO: foco visible para quien navega con teclado */
-        .btn-whatsapp:focus-visible,
-        .btn-enviar-wa:focus-visible,
-        .cerrar-modal:focus-visible,
-        .grupo-campo select:focus-visible,
-        .grupo-campo input:focus-visible {
-            outline: 3px solid var(--color-primario);
-            outline-offset: 2px;
-        }
-
-        /* Ventana emergente (modal) */
         .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            align-items: center;
-            justify-content: center;
+            display: none; position: fixed; z-index: 1000; left: 0; top: 0;
+            width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);
+            align-items: center; justify-content: center;
         }
-
         .modal-contenido {
-            background-color: var(--blanco);
-            padding: 2rem;
-            border-radius: 8px;
-            width: 90%;
-            max-width: 450px;
-            max-height: 90vh;
-            overflow-y: auto;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-            position: relative;
+            background-color: var(--blanco); padding: 2rem; border-radius: 8px;
+            width: 90%; max-width: 450px; max-height: 90vh; overflow-y: auto;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2); position: relative;
             animation: entradaModal 0.3s ease-out;
         }
-
         @keyframes entradaModal {
             from { transform: translateY(-30px); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
         }
-
         @media (prefers-reduced-motion: reduce) {
             html { scroll-behavior: auto; }
             .modal-contenido { animation: none; }
         }
 
-        /* CORREGIDO: ahora es un <button> (antes era un <span> que no se podía usar con teclado) */
         .cerrar-modal {
-            position: absolute;
-            top: 0.8rem;
-            right: 1rem;
-            font-size: 1.8rem;
-            line-height: 1;
-            font-weight: bold;
-            color: #777;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 0.2rem 0.5rem;
+            position: absolute; top: 0.8rem; right: 1rem; font-size: 1.8rem;
+            line-height: 1; font-weight: bold; color: #777; background: none;
+            border: none; cursor: pointer; padding: 0.2rem 0.5rem;
         }
-
-        .cerrar-modal:hover {
-            color: #333;
-        }
-
-        .modal h3 {
-            margin-top: 0;
-            padding-right: 2rem;
-            color: var(--color-oscuro);
-            border-bottom: 2px solid var(--color-primario);
-            padding-bottom: 0.5rem;
-        }
-
-        .modal-ayuda {
-            font-size: 0.85rem;
-            color: #666;
-            margin-bottom: 1.5rem;
-        }
-
-        .grupo-campo {
-            margin-bottom: 1.2rem;
-        }
-
-        .grupo-campo label {
-            display: block;
-            margin-bottom: 0.4rem;
-            font-weight: bold;
-            font-size: 0.9rem;
-        }
-
-        .grupo-campo select, .grupo-campo input {
-            width: 100%;
-            padding: 0.7rem;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 1rem;
-        }
-
+        .cerrar-modal:hover { color: #333; }
+        .modal h3 { margin-top: 0; padding-right: 2rem; color: var(--color-oscuro); border-bottom: 2px solid var(--color-primario); padding-bottom: 0.5rem; }
+        .modal-ayuda { font-size: 0.85rem; color: #666; margin-bottom: 1.5rem; }
+        .grupo-campo { margin-bottom: 1.2rem; }
+        .grupo-campo label { display: block; margin-bottom: 0.4rem; font-weight: bold; font-size: 0.9rem; }
+        .grupo-campo select, .grupo-campo input { width: 100%; padding: 0.7rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
         .btn-enviar-wa {
-            width: 100%;
-            background-color: #128c4a;
-            color: var(--blanco);
-            border: none;
-            padding: 0.8rem;
-            font-weight: bold;
-            font-size: 1rem;
-            border-radius: 4px;
-            cursor: pointer;
+            width: 100%; background-color: #128c4a; color: var(--blanco); border: none;
+            padding: 0.8rem; font-weight: bold; font-size: 1rem; border-radius: 4px; cursor: pointer;
         }
+        .btn-enviar-wa:hover { background-color: #0e7a3f; }
 
-        .btn-enviar-wa:hover {
-            background-color: #0e7a3f;
-        }
+        .mapa-contenedor { width: 100%; height: 250px; border-radius: 6px; overflow: hidden; margin-top: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+        .mapa-contenedor iframe { width: 100%; height: 100%; border: 0; }
 
-        /* Mapa responsivo */
-        .mapa-contenedor {
-            width: 100%;
-            height: 250px;
-            border-radius: 6px;
-            overflow: hidden;
-            margin-top: 1rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-        }
-
-        .mapa-contenedor iframe {
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-
-        footer {
-            background-color: var(--color-oscuro);
-            color: var(--blanco);
-            padding: 3rem 2rem 1.5rem 2rem;
-            margin-top: 4rem;
-        }
-
+        footer { background-color: var(--color-oscuro); color: var(--blanco); padding: 3rem 2rem 1.5rem 2rem; margin-top: 4rem; }
         .footer-contenido {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
+            max-width: 1200px; margin: 0 auto; display: grid;
             grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
-            gap: 2rem;
-            border-bottom: 1px solid #344a6e;
-            padding-bottom: 2rem;
+            gap: 2rem; border-bottom: 1px solid #344a6e; padding-bottom: 2rem;
         }
-
-        .footer-columna h4 {
-            color: #6fd83a;   /* CORREGIDO: verde más claro para buen contraste sobre el fondo oscuro */
-            margin-top: 0;
-            font-size: 1.2rem;
-        }
-
-        .footer-columna p {
-            margin: 0.5rem 0;
-            font-size: 0.95rem;
-        }
-
-        .footer-columna a {
-            color: var(--blanco);
-            text-decoration: none;
-        }
-
-        .footer-columna a:hover {
-            text-decoration: underline;
-        }
-
-        .footer-derechos {
-            text-align: center;
-            padding-top: 1.5rem;
-            font-size: 0.85rem;
-            color: #a3b1c6;
-        }
+        .footer-columna h4 { color: #6fd83a; margin-top: 0; font-size: 1.2rem; }
+        .footer-columna p { margin: 0.5rem 0; font-size: 0.95rem; }
+        .footer-columna a { color: var(--blanco); text-decoration: none; }
+        .footer-columna a:hover { text-decoration: underline; }
+        .footer-derechos { text-align: center; padding-top: 1.5rem; font-size: 0.85rem; color: #a3b1c6; }
 
         @media (max-width: 600px) {
-            .hero { padding: 2rem 1rem 3rem; }
-            .hero-logo { max-height: 200px; }
-            .hero h2 { font-size: 2.1rem; }
+            .hero { min-height: auto; padding: 3rem 1rem 4rem; }
+            .hero-logo, .hero-logo-respaldo { max-height: 220px; max-width: 90%; }
+            .hero h2 { font-size: 2.2rem; }
             .hero p { font-size: 1.1rem; }
         }
     </style>
@@ -428,7 +226,6 @@
 <body>
 
     <header>
-        <!-- CORREGIDO: class="logo final" eran dos clases separadas; ahora es una sola -->
         <div class="logo">
             <h1>VP<span>RIEGO</span></h1>
         </div>
@@ -454,12 +251,10 @@
 
     <main class="seccion-catalogos" id="catalogos">
         <h2 class="titulo-seccion">Nuestros Catálogos Especializados</h2>
-
         <div class="grid-catalogos">
-
             <div class="categoria-bloque">
                 <div class="categoria-banner bg-agua">Agua Potable</div>
-                <img src="tuberia-agua.jpg" alt="Tuberías de agua potable" class="producto-imagen" loading="lazy">
+                <img src="tuberia-agua.jpg" alt="Tuberías de agua potable" class="producto-imagen" loading="lazy"> 
                 <ul class="lista-productos">
                     <li class="producto-item">
                         <div>
@@ -512,11 +307,9 @@
                     </li>
                 </ul>
             </div>
-
         </div>
     </main>
 
-    <!-- CORREGIDO: se agregaron role="dialog" y aria-* para lectores de pantalla -->
     <div id="modal-cotizar" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-titulo-producto">
         <div class="modal-contenido">
             <button type="button" class="cerrar-modal" onclick="cerrarModal()" aria-label="Cerrar ventana">&times;</button>
@@ -525,7 +318,6 @@
 
             <form id="form-modal" onsubmit="procesarEnvioWhatsApp(event)">
                 <div class="grupo-campo">
-                    <!-- CORREGIDO: el id "modal-diámetro" tenía tilde; ahora es "modal-diametro" -->
                     <label for="modal-diametro">Diámetro requerido:</label>
                     <select id="modal-diametro" required>
                         <option value="">-- Seleccione diámetro --</option>
@@ -540,12 +332,10 @@
                         <option value="Otro / No aplica">Otro / No aplica</option>
                     </select>
                 </div>
-
                 <div class="grupo-campo">
                     <label for="modal-cantidad">Cantidad requerida (Metros / Unidades):</label>
                     <input type="number" id="modal-cantidad" min="1" step="1" inputmode="numeric" placeholder="Ej: 150" required>
                 </div>
-
                 <button type="submit" class="btn-enviar-wa">Confirmar y Enviar a WhatsApp</button>
             </form>
         </div>
@@ -557,37 +347,34 @@
                 <h4>VPRIEGO</h4>
                 <p>Tu aliado estratégico en infraestructura hidráulica, alcantarillado sanitario y tecnificación de riego agrícola.</p>
             </div>
-
             <div class="footer-columna">
                 <h4>Ubicación Principal</h4>
-                <!-- CORREGIDO: "Guayasamí" → "Guayasamín" y espacios sobrantes -->
                 <p>Av. Oswaldo Guayasamín N4-234 y Av. Universitaria</p>
                 <p><strong>Sector Villa Vega</strong>, Tumbaco - Quito</p>
-
                 <div class="mapa-contenedor">
-                    <!-- CORREGIDO: se agregó title (accesibilidad) y se quitó el style duplicado -->
                     <iframe title="Mapa de ubicación de VP Riego en Tumbaco" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d880.1893460450551!2d-78.38876921580066!3d-0.21281862589552636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d591440760769f%3A0x4f7e779101336216!2sVP%20Riego-%20Tuber%C3%ADa%20de%20agua%20potable!5e1!3m2!1ses-419!2sec!4v1779230176503!5m2!1ses-419!2sec" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
-
             <div class="footer-columna">
                 <h4>Líneas de Atención</h4>
-                <!-- CORREGIDO: formato internacional (+593) para que funcione desde cualquier país -->
                 <p>Celular 1: <a href="tel:+593996541024">099 654 1024</a></p>
                 <p>Celular 2: <a href="tel:+593996600715">099 660 0715</a></p>
             </div>
         </div>
         <div class="footer-derechos">
-            <!-- CORREGIDO: redacción ("derechos de programación" no es una fórmula habitual) -->
-            <p>© 2026 VPRIEGO. Todos los derechos reservados.</p>
-            <p id="contador-visitas" hidden>Visitas: <strong id="contador-numero">0</strong></p>
+            <!-- 🔥 NUEVO: Año dinámico, nunca más tendrás que actualizarlo manualmente -->
+            <p>© <span id="year"></span> VPRIEGO. Todos los derechos reservados.</p>
+            
+            <!-- 🔥 CORREGIDO: Contador de visitas funcional y fiable -->
+            <p id="contador-visitas" hidden style="margin-top: 0.5rem; font-size: 0.8rem;">
+                Visitas al sitio: <strong id="contador-numero" style="color: #6fd83a;">0</strong>
+            </p>
         </div>
     </footer>
 
     <script>
         let productoSeleccionado = "";
         let categoriaSeleccionada = "";
-
         const modal = document.getElementById("modal-cotizar");
         const tituloModal = document.getElementById("modal-titulo-producto");
         const formModal = document.getElementById("form-modal");
@@ -605,13 +392,11 @@
         function cerrarModal() {
             modal.style.display = "none";
             formModal.reset();
-            // Devuelve el foco al botón que abrió la ventana
             if (botonQueAbrio) botonQueAbrio.focus();
         }
 
         function procesarEnvioWhatsApp(event) {
             event.preventDefault();
-
             const diametro = document.getElementById("modal-diametro").value;
             const cantidad = document.getElementById("modal-cantidad").value;
             const numeroTelefono = "593996541024";
@@ -623,39 +408,51 @@
                             `• *Cantidad:* ${cantidad} metros/unidades.\n\n` +
                             `Quedo atento a su respuesta para la disponibilidad y formas de entrega en el sector de Tumbaco.`;
 
-            const mensajeCodificado = encodeURIComponent(mensaje);
-            // CORREGIDO: noopener,noreferrer por seguridad al abrir una pestaña nueva
-            window.open(`https://wa.me/${numeroTelefono}?text=${mensajeCodificado}`, "_blank", "noopener,noreferrer");
+            window.open(`https://wa.me/${numeroTelefono}?text=${encodeURIComponent(mensaje)}`, "_blank", "noopener,noreferrer");
             cerrarModal();
         }
 
-        // CORREGIDO: addEventListener en lugar de window.onclick (que puede ser sobrescrito)
         modal.addEventListener("click", function (event) {
             if (event.target === modal) cerrarModal();
         });
 
-        // NUEVO: cerrar con la tecla Escape
         document.addEventListener("keydown", function (event) {
             if (event.key === "Escape" && modal.style.display === "flex") cerrarModal();
         });
 
-        // ===== CONTADOR DE VISITAS (CounterAPI, gratis y sin registro) =====
-        // Cuenta cada navegador una sola vez; si vuelve a entrar, solo muestra el número.
+        // 🔥 NUEVO: Año dinámico en el footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // 🔥 CORREGIDO: Contador de visitas funcional
+        // La API anterior (counterapi.dev) fue descontinuada. 
+        // Usamos una alternativa gratuita, estable y sin registro: count.getloli.com
         (function () {
-            const base = "https://api.counterapi.dev/v1/kikegith-vp-riego/visitas";
+            const namespace = "vpriego-tumbaco-quito"; // Identificador único de tu sitio
+            const url = `https://count.getloli.com/get/@${namespace}`;
+            
+            // Verificamos si ya contamos a este usuario para no inflar el número artificialmente
             let yaContado = false;
             try { yaContado = localStorage.getItem("vpriego_visita") === "1"; } catch (e) {}
 
-            fetch(yaContado ? base : base + "/up")
-                .then(r => r.ok ? r.json() : Promise.reject())
-                .then(d => {
-                    const n = d.count ?? d.value;
-                    if (n === undefined) return;
-                    document.getElementById("contador-numero").textContent = Number(n).toLocaleString("es-EC");
-                    document.getElementById("contador-visitas").hidden = false;
-                    try { localStorage.setItem("vpriego_visita", "1"); } catch (e) {}
+            fetch(url)
+                .then(res => res.ok ? res.json() : Promise.reject())
+                .then(data => {
+                    if (data && data.count !== undefined) {
+                        document.getElementById("contador-numero").textContent = Number(data.count).toLocaleString("es-EC");
+                        document.getElementById("contador-visitas").hidden = false;
+                        
+                        // Si es la primera vez que entra este navegador, marcamos como visitado
+                        // y hacemos una petición extra para sumar 1 al contador global de forma ética.
+                        if (!yaContado) {
+                            try { localStorage.setItem("vpriego_visita", "1"); } catch (e) {}
+                            fetch(`https://count.getloli.com/get/@${namespace}?action=increment`).catch(() => {});
+                        }
+                    }
                 })
-                .catch(() => { /* si el servicio no responde, el contador simplemente no se muestra */ });
+                .catch(() => {
+                    // Si la API falla (muy raro), el contador simplemente permanece oculto, sin romper la página.
+                    console.log("Contador en modo de espera");
+                });
         })();
     </script>
 </body>

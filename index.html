@@ -103,6 +103,33 @@
             border-radius: 8px;
         }
 
+        .hero-logo {
+            background: var(--blanco);
+            padding: 0.6rem 1rem;
+        }
+
+        /* Logo de respaldo: aparece solo si logo1.jpg no carga */
+        .hero-logo-respaldo {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            gap: 0.9rem;
+            margin: 0 auto 1.5rem;
+            font-size: 3rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .hero-logo-respaldo svg {
+            width: 64px;
+            height: 64px;
+            flex-shrink: 0;
+        }
+
+        .hero-logo-respaldo span {
+            color: #6fd83a;
+        }
+
         .hero h2 {
             font-size: 2.8rem;
             margin: 0 0 1rem 0;
@@ -412,7 +439,15 @@
     </header>
 
     <section class="hero">
-        <img src="logo1.jpg" alt="Logo de VP Riego" class="hero-logo">
+        <img src="logo1.jpg" alt="Logo de VP Riego" class="hero-logo"
+             onerror="this.style.display='none'; document.getElementById('logo-respaldo').style.display='flex';">
+        <div id="logo-respaldo" class="hero-logo-respaldo" aria-hidden="true">
+            <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                <path d="M32 4C32 4 12 28 12 41a20 20 0 0 0 40 0C52 28 32 4 32 4z" fill="#0077b6"/>
+                <path d="M22 42a10 10 0 0 0 10 10" stroke="#ffffff" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.8"/>
+            </svg>
+            <div>VP<span>RIEGO</span></div>
+        </div>
         <h2>VP RIEGO</h2>
         <p>Todo en agua potable, alcantarillado y riego. Tanques, bombas de agua, válvulas, tubos y accesorios en general.</p>
     </section>
@@ -545,6 +580,7 @@
         <div class="footer-derechos">
             <!-- CORREGIDO: redacción ("derechos de programación" no es una fórmula habitual) -->
             <p>© 2026 VPRIEGO. Todos los derechos reservados.</p>
+            <p id="contador-visitas" hidden>Visitas: <strong id="contador-numero">0</strong></p>
         </div>
     </footer>
 
@@ -602,6 +638,25 @@
         document.addEventListener("keydown", function (event) {
             if (event.key === "Escape" && modal.style.display === "flex") cerrarModal();
         });
+
+        // ===== CONTADOR DE VISITAS (CounterAPI, gratis y sin registro) =====
+        // Cuenta cada navegador una sola vez; si vuelve a entrar, solo muestra el número.
+        (function () {
+            const base = "https://api.counterapi.dev/v1/kikegith-vp-riego/visitas";
+            let yaContado = false;
+            try { yaContado = localStorage.getItem("vpriego_visita") === "1"; } catch (e) {}
+
+            fetch(yaContado ? base : base + "/up")
+                .then(r => r.ok ? r.json() : Promise.reject())
+                .then(d => {
+                    const n = d.count ?? d.value;
+                    if (n === undefined) return;
+                    document.getElementById("contador-numero").textContent = Number(n).toLocaleString("es-EC");
+                    document.getElementById("contador-visitas").hidden = false;
+                    try { localStorage.setItem("vpriego_visita", "1"); } catch (e) {}
+                })
+                .catch(() => { /* si el servicio no responde, el contador simplemente no se muestra */ });
+        })();
     </script>
 </body>
 </html>

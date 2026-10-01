@@ -8,30 +8,41 @@
     <meta name="description" content="Expertos en distribución de tuberías PVC, PEAD, sistemas de riego agrícola y alcantarillado en Tumbaco. Cotiza directo por WhatsApp con marcas líderes.">
     <meta name="keywords" content="tuberias tumbaco, sistemas de riego quito, pvc presion uniflex, manguera polietileno ecuador, vpriego">
     <meta name="author" content="VPRIEGO">
+    <link rel="canonical" href="https://kikegith.github.io/vp-riego/">
 
     <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_EC">
     <meta property="og:title" content="VPRIEGO | Tuberías y Sistemas de Riego Profesionales">
     <meta property="og:description" content="Distribución de tuberías de alta resistencia para ingeniería y agricultura en Quito y Tumbaco. ¡Cotiza tu presupuesto hoy!">
-    <meta property="og:image" content="logo final.jpg">
+    <!-- CORREGIDO: og:image debe ser una URL absoluta y sin espacios -->
+    <meta property="og:image" content="https://kikegith.github.io/vp-riego/logo%20final.jpg">
     <meta property="og:url" content="https://kikegith.github.io/vp-riego/">
 
     <style>
-        /* DOCUMENTACIÓN: Configuración de Variables de Diseño Global */
+        /* Variables de diseño global */
         :root {
             --color-primario: #0077b6;      /* Azul - Agua Potable */
             --color-secundario: #5c677d;    /* Gris - Alcantarillado */
-            --color-terciario: #38b000;      /* Verde - Riego VP */
+            --color-terciario: #38b000;     /* Verde - Riego VP */
             --color-oscuro: #1d3557;
             --color-fondo: #f8f9fa;
             --blanco: #ffffff;
             --verde-whatsapp: #25d366;
         }
 
+        /* CORREGIDO: box-sizing aplicado a todos los elementos, no solo al body */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
             background-color: var(--color-fondo);
             color: #333;
         }
@@ -43,15 +54,18 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;   /* CORREGIDO: no se desborda en celulares */
+            gap: 1rem;
         }
 
-        .logo final h1 {
+        /* CORREGIDO: antes era ".logo final h1" (buscaba una etiqueta <final> que no existe) */
+        .logo h1 {
             margin: 0;
             font-size: 1.8rem;
             letter-spacing: 1px;
         }
 
-        .logo final span {
+        .logo span {
             color: var(--color-terciario);
         }
 
@@ -62,17 +76,27 @@
             font-weight: bold;
         }
 
-        /* DOCUMENTACIÓN CSS: Sección Hero con tu imagen corporativa logo.jpg */
+        nav a:first-child {
+            margin-left: 0;
+        }
+
+        nav a:hover,
+        nav a:focus-visible {
+            text-decoration: underline;
+        }
+
+        /* Sección Hero con la imagen corporativa */
         .hero {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('logo final.jpg');
-            background-size: contain;
-            background-size:cover;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('logo%20final.jpg');
+            /* CORREGIDO: había dos declaraciones de background-size (contain y cover); se dejó solo cover */
+            background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            background-color: var(--color-oscuro); /* color de respaldo si la imagen no carga */
             color: var(--blanco);
             text-align: center;
-            padding: 8rem 1rem; 
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.8); 
+            padding: 8rem 1rem;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
         }
 
         .hero h2 {
@@ -101,7 +125,8 @@
 
         .grid-catalogos {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            /* CORREGIDO: min(100%, 320px) evita desborde horizontal en pantallas menores a 320px */
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
             gap: 2rem;
         }
 
@@ -124,13 +149,15 @@
 
         .bg-agua { background-color: var(--color-primario); }
         .bg-alcantarillado { background-color: var(--color-secundario); }
-        .bg-riego { background-color: var(--color-terciario); }
+        /* CORREGIDO: el blanco sobre #38b000 tenía poco contraste; se oscureció el verde solo en el banner */
+        .bg-riego { background-color: #2f8f00; }
 
         .producto-imagen {
             width: 100%;
-            height: 200px;         
-            object-fit: cover;     
-            background-color: #e9ecef; 
+            height: 200px;
+            object-fit: cover;
+            background-color: #e9ecef;
+            display: block;
         }
 
         .lista-productos {
@@ -167,7 +194,7 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            background-color: var(--verde-whatsapp);
+            background-color: #128c4a;   /* CORREGIDO: más oscuro para que el texto blanco sea legible */
             color: var(--blanco);
             text-decoration: none;
             padding: 0.6rem 1rem;
@@ -181,19 +208,29 @@
         }
 
         .btn-whatsapp:hover {
-            background-color: #1ebd58;
+            background-color: #0e7a3f;
         }
 
-        /* POP-UP MODAL */
+        /* CORREGIDO: foco visible para quien navega con teclado */
+        .btn-whatsapp:focus-visible,
+        .btn-enviar-wa:focus-visible,
+        .cerrar-modal:focus-visible,
+        .grupo-campo select:focus-visible,
+        .grupo-campo input:focus-visible {
+            outline: 3px solid var(--color-primario);
+            outline-offset: 2px;
+        }
+
+        /* Ventana emergente (modal) */
         .modal {
-            display: none; 
+            display: none;
             position: fixed;
             z-index: 1000;
             left: 0;
             top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.5); 
+            background-color: rgba(0, 0, 0, 0.5);
             align-items: center;
             justify-content: center;
         }
@@ -204,6 +241,8 @@
             border-radius: 8px;
             width: 90%;
             max-width: 450px;
+            max-height: 90vh;
+            overflow-y: auto;
             box-shadow: 0 4px 20px rgba(0,0,0,0.2);
             position: relative;
             animation: entradaModal 0.3s ease-out;
@@ -214,14 +253,24 @@
             to { transform: translateY(0); opacity: 1; }
         }
 
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            .modal-contenido { animation: none; }
+        }
+
+        /* CORREGIDO: ahora es un <button> (antes era un <span> que no se podía usar con teclado) */
         .cerrar-modal {
             position: absolute;
-            top: 1rem;
-            right: 1.2rem;
-            font-size: 1.5rem;
+            top: 0.8rem;
+            right: 1rem;
+            font-size: 1.8rem;
+            line-height: 1;
             font-weight: bold;
-            color: #aaa;
+            color: #777;
+            background: none;
+            border: none;
             cursor: pointer;
+            padding: 0.2rem 0.5rem;
         }
 
         .cerrar-modal:hover {
@@ -230,9 +279,16 @@
 
         .modal h3 {
             margin-top: 0;
+            padding-right: 2rem;
             color: var(--color-oscuro);
             border-bottom: 2px solid var(--color-primario);
             padding-bottom: 0.5rem;
+        }
+
+        .modal-ayuda {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 1.5rem;
         }
 
         .grupo-campo {
@@ -251,12 +307,12 @@
             padding: 0.7rem;
             border: 1px solid #ccc;
             border-radius: 4px;
-            box-sizing: border-box;
+            font-size: 1rem;
         }
 
         .btn-enviar-wa {
             width: 100%;
-            background-color: var(--verde-whatsapp);
+            background-color: #128c4a;
             color: var(--blanco);
             border: none;
             padding: 0.8rem;
@@ -266,7 +322,11 @@
             cursor: pointer;
         }
 
-        /* DOCUMENTACIÓN CSS: Estilos del Mapa Responsivo */
+        .btn-enviar-wa:hover {
+            background-color: #0e7a3f;
+        }
+
+        /* Mapa responsivo */
         .mapa-contenedor {
             width: 100%;
             height: 250px;
@@ -293,14 +353,14 @@
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
             gap: 2rem;
             border-bottom: 1px solid #344a6e;
             padding-bottom: 2rem;
         }
 
         .footer-columna h4 {
-            color: var(--color-terciario);
+            color: #6fd83a;   /* CORREGIDO: verde más claro para buen contraste sobre el fondo oscuro */
             margin-top: 0;
             font-size: 1.2rem;
         }
@@ -315,21 +375,32 @@
             text-decoration: none;
         }
 
+        .footer-columna a:hover {
+            text-decoration: underline;
+        }
+
         .footer-derechos {
             text-align: center;
             padding-top: 1.5rem;
             font-size: 0.85rem;
             color: #a3b1c6;
         }
+
+        @media (max-width: 600px) {
+            .hero { padding: 5rem 1rem; }
+            .hero h2 { font-size: 2.1rem; }
+            .hero p { font-size: 1.1rem; }
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo final">
+        <!-- CORREGIDO: class="logo final" eran dos clases separadas; ahora es una sola -->
+        <div class="logo">
             <h1>VP<span>RIEGO</span></h1>
         </div>
-        <nav>
+        <nav aria-label="Navegación principal">
             <a href="#catalogos">Catálogos</a>
             <a href="#contacto">Contacto</a>
         </nav>
@@ -347,56 +418,56 @@
 
             <div class="categoria-bloque">
                 <div class="categoria-banner bg-agua">Agua Potable</div>
-                <img src="tuberia agua.jpg" alt="Tuberías de agua potable" class="producto-imagen">
+                <img src="tuberia%20agua.jpg" alt="Tuberías de agua potable" class="producto-imagen" loading="lazy">
                 <ul class="lista-productos">
                     <li class="producto-item">
                         <div>
                             <div class="producto-nombre">Tubería PVC Presión Uniflex</div>
                             <div class="producto-detalle">Para redes matrices y uniones mecánicas</div>
                         </div>
-                        <button class="btn-whatsapp" onclick="abrirCotizador('Tubería PVC Presión Uniflex', 'Agua Potable')">Cotizar por WhatsApp</button>
+                        <button type="button" class="btn-whatsapp" onclick="abrirCotizador('Tubería PVC Presión Uniflex', 'Agua Potable')">Cotizar por WhatsApp</button>
                     </li>
                     <li class="producto-item">
                         <div>
                             <div class="producto-nombre">Tubería PEAD (Polietileno)</div>
                             <div class="producto-detalle">Alta densidad, rollos y tramos rectos</div>
                         </div>
-                        <button class="btn-whatsapp" onclick="abrirCotizador('Tubería PEAD (Polietileno)', 'Agua Potable')">Cotizar por WhatsApp</button>
+                        <button type="button" class="btn-whatsapp" onclick="abrirCotizador('Tubería PEAD (Polietileno)', 'Agua Potable')">Cotizar por WhatsApp</button>
                     </li>
                 </ul>
             </div>
 
             <div class="categoria-bloque">
                 <div class="categoria-banner bg-alcantarillado">Alcantarillado</div>
-                <img src="alcantarillado.jpg" alt="Tuberías corrugadas de alcantarillado" class="producto-imagen">
+                <img src="alcantarillado.jpg" alt="Tuberías corrugadas de alcantarillado" class="producto-imagen" loading="lazy">
                 <ul class="lista-productos">
                     <li class="producto-item">
                         <div>
                             <div class="producto-nombre">Tubería PVC Corrugada</div>
                             <div class="producto-detalle">Estructurada para sistemas pluviales y sanitarios</div>
                         </div>
-                        <button class="btn-whatsapp" onclick="abrirCotizador('Tubería PVC Corrugada', 'Alcantarillado')">Cotizar por WhatsApp</button>
+                        <button type="button" class="btn-whatsapp" onclick="abrirCotizador('Tubería PVC Corrugada', 'Alcantarillado')">Cotizar por WhatsApp</button>
                     </li>
                 </ul>
             </div>
 
             <div class="categoria-bloque">
                 <div class="categoria-banner bg-riego">Sistemas de Riego</div>
-                <img src="aspersores.jpg" alt="Sistemas de riego agrícola" class="producto-imagen">
+                <img src="aspersores.jpg" alt="Sistemas de riego agrícola" class="producto-imagen" loading="lazy">
                 <ul class="lista-productos">
                     <li class="producto-item">
                         <div>
                             <div class="producto-nombre">Manguera Polietileno Riego</div>
                             <div class="producto-detalle">Baja densidad, ideal para derivaciones</div>
                         </div>
-                        <button class="btn-whatsapp" onclick="abrirCotizador('Manguera Polietileno Riego', 'Sistemas de Riego')">Cotizar por WhatsApp</button>
+                        <button type="button" class="btn-whatsapp" onclick="abrirCotizador('Manguera Polietileno Riego', 'Sistemas de Riego')">Cotizar por WhatsApp</button>
                     </li>
                     <li class="producto-item">
                         <div>
                             <div class="producto-nombre">Cinta de Goteo</div>
                             <div class="producto-detalle">Con goteros integrados a diversas distancias</div>
                         </div>
-                        <button class="btn-whatsapp" onclick="abrirCotizador('Cinta de Goteo', 'Sistemas de Riego')">Cotizar por WhatsApp</button>
+                        <button type="button" class="btn-whatsapp" onclick="abrirCotizador('Cinta de Goteo', 'Sistemas de Riego')">Cotizar por WhatsApp</button>
                     </li>
                 </ul>
             </div>
@@ -404,16 +475,18 @@
         </div>
     </main>
 
-    <div id="modal-cotizar" class="modal">
+    <!-- CORREGIDO: se agregaron role="dialog" y aria-* para lectores de pantalla -->
+    <div id="modal-cotizar" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-titulo-producto">
         <div class="modal-contenido">
-            <span class="cerrar-modal" onclick="cerrarModal()">×</span>
+            <button type="button" class="cerrar-modal" onclick="cerrarModal()" aria-label="Cerrar ventana">&times;</button>
             <h3 id="modal-titulo-producto">Especificaciones de Cotización</h3>
-            <p style="font-size: 0.85rem; color:#666; margin-bottom: 1.5rem;">Indícanos las dimensiones requeridas para enviar la información exacta a nuestro asesor técnico.</p>
+            <p class="modal-ayuda">Indícanos las dimensiones requeridas para enviar la información exacta a nuestro asesor técnico.</p>
 
             <form id="form-modal" onsubmit="procesarEnvioWhatsApp(event)">
                 <div class="grupo-campo">
-                    <label for="modal-diámetro">Diámetro requerido:</label>
-                    <select id="modal-diámetro" required>
+                    <!-- CORREGIDO: el id "modal-diámetro" tenía tilde; ahora es "modal-diametro" -->
+                    <label for="modal-diametro">Diámetro requerido:</label>
+                    <select id="modal-diametro" required>
                         <option value="">-- Seleccione diámetro --</option>
                         <option value="1/2 pulgada">1/2"</option>
                         <option value="3/4 pulgada">3/4"</option>
@@ -429,7 +502,7 @@
 
                 <div class="grupo-campo">
                     <label for="modal-cantidad">Cantidad requerida (Metros / Unidades):</label>
-                    <input type="number" id="modal-cantidad" min="1" placeholder="Ej: 150" required>
+                    <input type="number" id="modal-cantidad" min="1" step="1" inputmode="numeric" placeholder="Ej: 150" required>
                 </div>
 
                 <button type="submit" class="btn-enviar-wa">Confirmar y Enviar a WhatsApp</button>
@@ -446,22 +519,26 @@
 
             <div class="footer-columna">
                 <h4>Ubicación Principal</h4>
-                <p>Av. Oswaldo Guayasamí N4-234 y Av. Universitaria </p>
-                <p><strong>Sector Villa Vega </strong> Quito - Tumbaco</p>
+                <!-- CORREGIDO: "Guayasamí" → "Guayasamín" y espacios sobrantes -->
+                <p>Av. Oswaldo Guayasamín N4-234 y Av. Universitaria</p>
+                <p><strong>Sector Villa Vega</strong>, Tumbaco - Quito</p>
 
                 <div class="mapa-contenedor">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d880.1893460450551!2d-78.38876921580066!3d-0.21281862589552636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d591440760769f%3A0x4f7e779101336216!2sVP%20Riego-%20Tuber%C3%ADa%20de%20agua%20potable!5e1!3m2!1ses-419!2sec!4v1779230176503!5m2!1ses-419!2sec" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <!-- CORREGIDO: se agregó title (accesibilidad) y se quitó el style duplicado -->
+                    <iframe title="Mapa de ubicación de VP Riego en Tumbaco" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d880.1893460450551!2d-78.38876921580066!3d-0.21281862589552636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d591440760769f%3A0x4f7e779101336216!2sVP%20Riego-%20Tuber%C3%ADa%20de%20agua%20potable!5e1!3m2!1ses-419!2sec!4v1779230176503!5m2!1ses-419!2sec" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
 
             <div class="footer-columna">
                 <h4>Líneas de Atención</h4>
-                <p>Celular 1: <a href="tel:0996541024">099 654 1024</a></p>
-                <p>Celular 2: <a href="tel:0996600715">099 660 0715</a></p>
+                <!-- CORREGIDO: formato internacional (+593) para que funcione desde cualquier país -->
+                <p>Celular 1: <a href="tel:+593996541024">099 654 1024</a></p>
+                <p>Celular 2: <a href="tel:+593996600715">099 660 0715</a></p>
             </div>
         </div>
         <div class="footer-derechos">
-            <p>© 2026 VPRIEGO. Todos los derechos de programación reservados.</p>
+            <!-- CORREGIDO: redacción ("derechos de programación" no es una fórmula habitual) -->
+            <p>© 2026 VPRIEGO. Todos los derechos reservados.</p>
         </div>
     </footer>
 
@@ -471,25 +548,31 @@
 
         const modal = document.getElementById("modal-cotizar");
         const tituloModal = document.getElementById("modal-titulo-producto");
+        const formModal = document.getElementById("form-modal");
+        let botonQueAbrio = null;
 
         function abrirCotizador(producto, categoria) {
             productoSeleccionado = producto;
             categoriaSeleccionada = categoria;
-            tituloModal.innerText = `Cotizar: ${producto}`;
+            botonQueAbrio = document.activeElement;
+            tituloModal.textContent = `Cotizar: ${producto}`;
             modal.style.display = "flex";
+            document.getElementById("modal-diametro").focus();
         }
 
         function cerrarModal() {
             modal.style.display = "none";
-            document.getElementById("form-modal").reset(); 
+            formModal.reset();
+            // Devuelve el foco al botón que abrió la ventana
+            if (botonQueAbrio) botonQueAbrio.focus();
         }
 
         function procesarEnvioWhatsApp(event) {
-            event.preventDefault(); 
+            event.preventDefault();
 
-            const diametro = document.getElementById("modal-diámetro").value;
+            const diametro = document.getElementById("modal-diametro").value;
             const cantidad = document.getElementById("modal-cantidad").value;
-            const numeroTelefono = "593996541024"; 
+            const numeroTelefono = "593996541024";
 
             const mensaje = `Hola VPRIEGO. Deseo solicitar una cotización con los siguientes detalles:\n\n` +
                             `• *Línea de catálogo:* ${categoriaSeleccionada}\n` +
@@ -499,15 +582,20 @@
                             `Quedo atento a su respuesta para la disponibilidad y formas de entrega en el sector de Tumbaco.`;
 
             const mensajeCodificado = encodeURIComponent(mensaje);
-            window.open(`https://wa.me/${numeroTelefono}?text=${mensajeCodificado}`, '_blank');
+            // CORREGIDO: noopener,noreferrer por seguridad al abrir una pestaña nueva
+            window.open(`https://wa.me/${numeroTelefono}?text=${mensajeCodificado}`, "_blank", "noopener,noreferrer");
             cerrarModal();
         }
 
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                cerrarModal();
-            }
-        }
+        // CORREGIDO: addEventListener en lugar de window.onclick (que puede ser sobrescrito)
+        modal.addEventListener("click", function (event) {
+            if (event.target === modal) cerrarModal();
+        });
+
+        // NUEVO: cerrar con la tecla Escape
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape" && modal.style.display === "flex") cerrarModal();
+        });
     </script>
 </body>
 </html>

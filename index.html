@@ -1,425 +1,200 @@
 <!DOCTYPE html>
 <html lang="es-EC">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- 🔥 SEO OPTIMIZADO -->
-    <title>VPRIEGO | Tuberías PVC, PEAD y Sistemas de Riego en Tumbaco, Quito</title>
-    <meta name="description" content="Distribuidor de tuberías PVC, PEAD, accesorios y sistemas de riego agrícola en Tumbaco y Quito. Agua potable, alcantarillado y riego por goteo. ¡Cotiza por WhatsApp!">
-    <meta name="keywords" content="tuberías tumbaco, sistemas de riego quito, pvc presión uniflex, manguera polietileno ecuador, vpriego, alcantarillado tumbaco, riego agrícola">
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="VPRIEGO">
-    <link rel="canonical" href="https://kikegith.github.io/vp-riego/">
-    <link rel="icon" href="logo1.png" type="image/png"> <!-- Recomendado cambiar a .png -->
-
-    <!-- Open Graph (Para cuando compartas el link en WhatsApp/Facebook) -->
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="es_EC">
-    <meta property="og:title" content="VPRIEGO | Tuberías y Sistemas de Riego en Tumbaco">
-    <meta property="og:description" content="Venta y distribución de tuberías de alta resistencia para ingeniería y agricultura en Quito y Tumbaco.">
-    <meta property="og:image" content="https://kikegith.github.io/vp-riego/logo1.jpg">
-    <meta property="og:url" content="https://kikegith.github.io/vp-riego/">
-
-    <!-- 🔥 DATOS ESTRUCTURADOS (SCHEMA.ORG) PARA GOOGLE MAPS Y BÚSQUEDA LOCAL -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "HomeAndConstructionBusiness",
-      "name": "VPRIEGO - Tuberías y Sistemas de Riego",
-      "image": "https://kikegith.github.io/vp-riego/logo1.jpg",
-      "telephone": "+593996541024",
-      "url": "https://kikegith.github.io/vp-riego/",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Av. Oswaldo Guayasamín N4-234 y Av. Universitaria, Sector Villa Vega",
-        "addressLocality": "Tumbaco, Quito",
-        "addressRegion": "Pichincha",
-        "postalCode": "170150",
-        "addressCountry": "EC"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -0.212818,
-        "longitude": -78.388769
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-        "opens": "08:00",
-        "closes": "18:00"
-      },
-      "priceRange": "$$"
-    }
-    </script>
-
-    <style>
-        :root {
-            --color-primario: #0077b6;
-            --color-secundario: #5c677d;
-            --color-terciario: #38b000;
-            --color-oscuro: #1d3557;
-            --color-fondo: #f8f9fa;
-            --blanco: #ffffff;
-        }
-
-        *, *::before, *::after { box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--color-fondo);
-            color: #333;
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: var(--color-oscuro);
-            color: var(--blanco);
-            padding: 1.5rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .logo h1 { margin: 0; font-size: 1.5rem; letter-spacing: 1px; line-height: 1.2; }
-        .logo h1 span { color: var(--color-terciario); display: block; font-size: 0.9rem; font-weight: normal; letter-spacing: 0.5px; margin-top: 4px; }
-
-        nav a { color: var(--blanco); text-decoration: none; margin-left: 1.5rem; font-weight: bold; }
-        nav a:first-child { margin-left: 0; }
-        nav a:hover { text-decoration: underline; }
-
-        .hero {
-            background: linear-gradient(160deg, var(--color-oscuro) 0%, #0b2545 100%);
-            color: var(--blanco);
-            text-align: center;
-            min-height: 70vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 4rem 1.5rem 5rem;
-        }
-
-        .hero-logo {
-            display: block;
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-            min-height: 200px;
-            margin: 0 auto 2rem;
-            object-fit: contain;
-            border-radius: 12px;
-            background: var(--blanco);
-            padding: 2rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-        }
-
-        .hero h2 {
-            font-size: 2.8rem;
-            margin: 0 0 1rem 0;
-            text-shadow: 0 4px 8px rgba(0,0,0,0.4);
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            max-width: 800px;
-            margin: 0 auto;
-            font-weight: 500;
-        }
-
-        .seccion-catalogos { max-width: 1200px; margin: 3rem auto; padding: 0 1rem; }
-        .titulo-seccion { text-align: center; margin-bottom: 2rem; color: var(--color-oscuro); font-size: 2rem; }
-
-        .grid-catalogos {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
-            gap: 2rem;
-        }
-
-        .categoria-bloque {
-            background: var(--blanco);
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .categoria-banner { padding: 1.2rem; color: var(--blanco); font-size: 1.3rem; font-weight: bold; text-align: center; }
-        .bg-agua { background-color: var(--color-primario); }
-        .bg-alcantarillado { background-color: var(--color-secundario); }
-        .bg-riego { background-color: #2f8f00; }
-
-        .producto-imagen { width: 100%; height: 200px; object-fit: cover; background-color: #e9ecef; display: block; }
-        .lista-productos { list-style: none; padding: 0; margin: 0; flex-grow: 1; }
-        .producto-item { padding: 1.2rem 1.5rem; border-bottom: 1px solid #eee; display: flex; flex-direction: column; gap: 0.5rem; }
-        .producto-item:last-child { border-bottom: none; }
-        .producto-nombre { font-weight: 600; font-size: 1.05rem; }
-        .producto-detalle { font-size: 0.85rem; color: #666; margin-bottom: 0.5rem; }
-
-        .btn-whatsapp {
-            display: inline-flex; align-items: center; justify-content: center;
-            background-color: #128c4a; color: var(--blanco); text-decoration: none;
-            padding: 0.7rem 1rem; border-radius: 6px; font-size: 0.9rem; font-weight: bold;
-            transition: background 0.2s; text-align: center; border: none; cursor: pointer;
-        }
-        .btn-whatsapp:hover { background-color: #0e7a3f; }
-
-        .modal {
-            display: none; position: fixed; z-index: 1000; left: 0; top: 0;
-            width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6);
-            align-items: center; justify-content: center;
-        }
-        .modal-contenido {
-            background-color: var(--blanco); padding: 2rem; border-radius: 8px;
-            width: 90%; max-width: 450px; max-height: 90vh; overflow-y: auto;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3); position: relative;
-        }
-
-        .cerrar-modal {
-            position: absolute; top: 0.8rem; right: 1rem; font-size: 1.8rem;
-            font-weight: bold; color: #777; background: none; border: none; cursor: pointer;
-        }
-        .cerrar-modal:hover { color: #333; }
-        .modal h3 { margin-top: 0; padding-right: 2rem; color: var(--color-oscuro); border-bottom: 2px solid var(--color-primario); padding-bottom: 0.5rem; }
-        .modal-ayuda { font-size: 0.85rem; color: #666; margin-bottom: 1.5rem; }
-        .grupo-campo { margin-bottom: 1.2rem; }
-        .grupo-campo label { display: block; margin-bottom: 0.4rem; font-weight: bold; font-size: 0.9rem; }
-        .grupo-campo select, .grupo-campo input { width: 100%; padding: 0.7rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
-        .btn-enviar-wa {
-            width: 100%; background-color: #128c4a; color: var(--blanco); border: none;
-            padding: 0.8rem; font-weight: bold; font-size: 1rem; border-radius: 4px; cursor: pointer;
-        }
-        .btn-enviar-wa:hover { background-color: #0e7a3f; }
-
-        .mapa-contenedor { width: 100%; height: 250px; border-radius: 6px; overflow: hidden; margin-top: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
-        .mapa-contenedor iframe { width: 100%; height: 100%; border: 0; }
-
-        footer { background-color: var(--color-oscuro); color: var(--blanco); padding: 3rem 2rem 1.5rem 2rem; margin-top: 4rem; }
-        .footer-contenido {
-            max-width: 1200px; margin: 0 auto; display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
-            gap: 2rem; border-bottom: 1px solid #344a6e; padding-bottom: 2rem;
-        }
-        .footer-columna h4 { color: #6fd83a; margin-top: 0; font-size: 1.2rem; }
-        .footer-columna p { margin: 0.5rem 0; font-size: 0.95rem; }
-        .footer-columna a { color: var(--blanco); text-decoration: none; }
-        .footer-columna a:hover { text-decoration: underline; }
-        .footer-derechos { text-align: center; padding-top: 1.5rem; font-size: 0.85rem; color: #a3b1c6; }
-
-        @media (max-width: 600px) {
-            .hero { min-height: auto; padding: 3rem 1rem 4rem; }
-            .hero-logo { min-height: 180px; padding: 1.5rem; }
-            .hero h2 { font-size: 2rem; }
-            .hero p { font-size: 1.1rem; }
-            .logo h1 { font-size: 1.3rem; text-align: center; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VPRIEGO | Tuberías PVC, PEAD y Sistemas de Riego en Tumbaco, Quito</title>
+<meta name="description" content="Distribuidor de tuberías Plastigama y Rival en Tumbaco: PVC presión, PEAD, alcantarillado, manguera y cinta de goteo. Lunes a sábado 8h00 a 18h00. ¡Cotiza por WhatsApp!">
+<meta name="keywords" content="tuberías tumbaco, plastigama tumbaco, rival tuberías, sistemas de riego quito, pvc presión uniflex, manguera polietileno ecuador, cinta de goteo, alcantarillado tumbaco, vpriego">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://kikegith.github.io/vp-riego/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_EC">
+<meta property="og:title" content="VPRIEGO | Tuberías y Sistemas de Riego en Tumbaco">
+<meta property="og:description" content="Tuberías Plastigama y Rival, accesorios y riego agrícola en Tumbaco y Quito. Cotiza por WhatsApp.">
+<meta property="og:url" content="https://kikegith.github.io/vp-riego/">
+<meta property="og:image" content="https://kikegith.github.io/vp-riego/logo1.jpg">
+<meta name="theme-color" content="#0b5a73">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HardwareStore","name":"VPRIEGO","description":"Distribuidor de tuberías Plastigama y Rival, PVC, PEAD, alcantarillado y sistemas de riego en Tumbaco.","url":"https://kikegith.github.io/vp-riego/","image":"https://kikegith.github.io/vp-riego/logo1.jpg","telephone":"+593996541024","address":{"@type":"PostalAddress","streetAddress":"Av. Oswaldo Guayasamín N4-234 y Av. Universitaria, Sector Villa Vega","addressLocality":"Tumbaco","addressRegion":"Pichincha","addressCountry":"EC"},"areaServed":["Tumbaco","Cumbayá","Los Chillos","Quito"],"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"08:00","closes":"18:00"}]}
+</script>
+<style>
+:root{--ink:#0e2b38;--water:#0b5a73;--water-d:#083f52;--leaf:#3f8f4f;--bg:#f2f7f8;--card:#fff;--line:#d3e2e6;--wa:#1c9d52;--muted:#4b6571;--r:10px}
+@media (prefers-color-scheme:dark){:root{--ink:#e6f1f4;--bg:#0a1a21;--card:#10262f;--line:#22404b;--muted:#9bb3bd;--water:#59b7d4;--water-d:#0b5a73}}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:"Source Sans 3",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;font-size:17px}
+h1,h2,h3{font-family:"Barlow Condensed","Arial Narrow",sans-serif;line-height:1.1;letter-spacing:.01em}
+a{color:var(--water)}
+:focus-visible{outline:3px solid #f0a020;outline-offset:2px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{background:var(--water-d);color:#fff;position:sticky;top:0;z-index:20}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:10px;padding-bottom:10px}
+.brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font:700 1.6rem "Barlow Condensed",sans-serif}
+.brand img{width:42px;height:42px;border-radius:8px;object-fit:cover;background:#fff}
+nav a{color:#fff;text-decoration:none;margin-left:18px;font-weight:600}
+nav a:hover{text-decoration:underline}
+.btn{display:inline-block;border:0;cursor:pointer;font:700 1rem "Source Sans 3",sans-serif;padding:12px 20px;border-radius:var(--r);text-decoration:none;background:var(--wa);color:#fff}
+.btn:hover{filter:brightness(1.1)}
+.btn.alt{background:transparent;border:2px solid #fff}
+.hero{background:linear-gradient(120deg,var(--water-d),var(--water));color:#fff;padding:64px 0 56px}
+.hero h1{font-size:clamp(2.4rem,6vw,4rem);max-width:15ch}
+.hero p{max-width:52ch;margin:16px 0 24px;font-size:1.15rem}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px}
+.status{display:inline-block;margin-top:22px;padding:6px 14px;border-radius:99px;background:rgba(255,255,255,.15);font-weight:600}
+.status i{display:inline-block;width:10px;height:10px;border-radius:50%;background:#aaa;margin-right:8px}
+.status.open i{background:#4be08a}
+section{padding:56px 0}
+h2{font-size:2.3rem;margin-bottom:8px}
+.sub{color:var(--muted);margin-bottom:28px;max-width:60ch}
+.brands{background:var(--card);border-block:1px solid var(--line);padding:18px 0;text-align:center;font-weight:700;color:var(--muted)}
+.brands b{color:var(--ink);font:700 1.5rem "Barlow Condensed",sans-serif;margin:0 14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:22px}
+.cat{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.cat img{width:100%;height:190px;object-fit:cover;display:block;background:var(--line)}
+.cat div.b{padding:18px}
+.cat h3{font-size:1.7rem;margin-bottom:10px}
+.cat ul{list-style:none;padding:0}
+.cat li{padding:12px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:10px}
+.cat li small{display:block;color:var(--muted);line-height:1.3}
+.cat li button{background:var(--wa);color:#fff;border:0;border-radius:8px;padding:8px 12px;font-weight:700;cursor:pointer;white-space:nowrap}
+.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.why div{border-left:4px solid var(--leaf);padding-left:14px}
+.why h3{font-size:1.4rem}
+details{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:14px 18px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:700}
+details p{margin-top:8px;color:var(--muted)}
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;align-items:start}
+.contact iframe{width:100%;height:320px;border:0;border-radius:var(--r)}
+.contact p{margin-bottom:12px}
+table{border-collapse:collapse;margin-bottom:14px}
+td{padding:3px 18px 3px 0}
+footer{background:var(--water-d);color:#cfe4ea;text-align:center;padding:24px 20px 90px;font-size:.95rem}
+.fab{position:fixed;right:16px;bottom:16px;z-index:30;background:var(--wa);color:#fff;text-decoration:none;font-weight:700;padding:14px 20px;border-radius:99px;box-shadow:0 4px 14px rgba(0,0,0,.3)}
+dialog{border:0;border-radius:var(--r);padding:24px;width:min(420px,92vw);background:var(--card);color:var(--ink)}
+dialog::backdrop{background:rgba(0,0,0,.55)}
+dialog h3{font-size:1.8rem}
+label{display:block;font-weight:600;margin-top:14px}
+select,input{width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;font:inherit;margin-top:4px;background:var(--bg);color:var(--ink)}
+.row{display:flex;gap:10px;margin-top:20px}
+.row .btn{flex:1}
+.row .x{background:var(--line);color:var(--ink)}
+@media (max-width:640px){nav a.h{display:none}.hero{padding:44px 0}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
 </head>
 <body>
+<header><div class="wrap">
+  <a class="brand" href="#inicio"><img src="logo1.jpg" alt="Logo de VPRIEGO">VPRIEGO</a>
+  <nav><a class="h" href="#catalogos">Productos</a><a class="h" href="#preguntas">Preguntas</a><a href="#contacto">Contacto</a></nav>
+</div></header>
 
-    <header>
-        <div class="logo">
-            <!-- 🔥 H1 OPTIMIZADO PARA SEO LOCAL -->
-            <h1>VP<span>RIEGO</span> <span style="font-size: 0.8rem; color: #ccc; display: block; margin-top: 5px;">Tuberías y Riego en Tumbaco, Quito</span></h1>
-        </div>
-        <nav aria-label="Navegación principal">
-            <a href="#catalogos">Catálogos</a>
-            <a href="#contacto">Contacto</a>
-        </nav>
-    </header>
+<main id="inicio">
+<div class="hero"><div class="wrap">
+  <h1>Tuberías y riego en Tumbaco</h1>
+  <p>Distribuimos tuberías Plastigama y Rival, accesorios, manguera y cinta de goteo para agua potable, alcantarillado y riego agrícola. Entregamos en Tumbaco, Cumbayá, Los Chillos y Quito.</p>
+  <div class="cta">
+    <a class="btn" href="https://wa.me/593996541024?text=Hola%20VPRIEGO%2C%20quisiera%20cotizar" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+    <a class="btn alt" href="tel:+593996541024">Llamar 099 654 1024</a>
+  </div>
+  <div class="status" id="status"><i></i><span>Lunes a sábado, 8h00 a 18h00</span></div>
+</div></div>
 
-    <section class="hero">
-        <img src="logo1.jpg" alt="Logo de VPRIEGO, distribuidor de tuberías y sistemas de riego en Tumbaco" class="hero-logo">
-        <h2>Soluciones en Agua, Alcantarillado y Riego</h2>
-        <p>Expertos en distribución de tuberías PVC, PEAD, tanques, bombas de agua, válvulas y accesorios para agricultura e ingeniería en Tumbaco y todo Quito.</p>
-    </section>
+<div class="brands">Marcas que distribuimos: <b>Plastigama</b><b>Rival</b></div>
 
-    <main class="seccion-catalogos" id="catalogos">
-        <h2 class="titulo-seccion">Nuestros Catálogos Especializados</h2>
-        <div class="grid-catalogos">
-            <div class="categoria-bloque">
-                <div class="categoria-banner bg-agua">Agua Potable</div>
-                <img src="tuberia-agua.jpg" alt="Tuberías PVC y PEAD para agua potable en Tumbaco" class="producto-imagen" loading="lazy"> 
-                <ul class="lista-productos">
-                    <li class="producto-item">
-                        <div>
-                            <div class="producto-nombre">Tubería PVC Presión Uniflex</div>
-                            <div class="producto-detalle">Para redes matrices y uniones mecánicas</div>
-                        </div>
-                        <button type="button" class="btn-whatsapp" onclick="abrirCotizador('Tubería PVC Presión Uniflex', 'Agua Potable')">Cotizar por WhatsApp</button>
-                    </li>
-                    <li class="producto-item">
-                        <div>
-                            <div class="producto-nombre">Tubería PEAD (Polietileno)</div>
-                            <div class="producto-detalle">Alta densidad, rollos y tramos rectos</div>
-                        </div>
-                        <button type="button" class="btn-whatsapp" onclick="abrirCotizador('Tubería PEAD (Polietileno)', 'Agua Potable')">Cotizar por WhatsApp</button>
-                    </li>
-                </ul>
-            </div>
+<section id="catalogos"><div class="wrap">
+  <h2>Productos</h2>
+  <p class="sub">Elige un producto, indica diámetro y cantidad, y un asesor te responde por WhatsApp.</p>
+  <div class="grid">
+    <article class="cat"><img src="tuberia-agua.jpg" alt="Tuberías PVC y PEAD para agua potable en Tumbaco" loading="lazy"><div class="b">
+      <h3>Agua potable</h3>
+      <ul>
+        <li><span>Tubería PVC Presión Uniflex<small>Redes matrices y uniones mecánicas</small></span><button data-p="Tubería PVC Presión Uniflex">Cotizar</button></li>
+        <li><span>Tubería PEAD (polietileno)<small>Alta densidad, en rollos y tramos rectos</small></span><button data-p="Tubería PEAD">Cotizar</button></li>
+      </ul></div></article>
+    <article class="cat"><img src="alcantarillado.jpg" alt="Tuberías corrugadas para alcantarillado sanitario y pluvial en Quito" loading="lazy"><div class="b">
+      <h3>Alcantarillado</h3>
+      <ul>
+        <li><span>Tubería PVC corrugada<small>Sistemas pluviales y sanitarios</small></span><button data-p="Tubería PVC Corrugada">Cotizar</button></li>
+      </ul></div></article>
+    <article class="cat"><img src="aspersores.jpg" alt="Sistemas de riego agrícola, goteo y aspersión en Tumbaco" loading="lazy"><div class="b">
+      <h3>Sistemas de riego</h3>
+      <ul>
+        <li><span>Manguera de polietileno<small>Baja densidad, para derivaciones agrícolas</small></span><button data-p="Manguera Polietileno Riego">Cotizar</button></li>
+        <li><span>Cinta de goteo<small>Goteros integrados a distintas distancias</small></span><button data-p="Cinta de Goteo">Cotizar</button></li>
+      </ul></div></article>
+  </div>
+</div></section>
 
-            <div class="categoria-bloque">
-                <div class="categoria-banner bg-alcantarillado">Alcantarillado</div>
-                <img src="alcantarillado.jpg" alt="Tuberías corrugadas para alcantarillado sanitario y pluvial en Quito" class="producto-imagen" loading="lazy">
-                <ul class="lista-productos">
-                    <li class="producto-item">
-                        <div>
-                            <div class="producto-nombre">Tubería PVC Corrugada</div>
-                            <div class="producto-detalle">Estructurada para sistemas pluviales y sanitarios</div>
-                        </div>
-                        <button type="button" class="btn-whatsapp" onclick="abrirCotizador('Tubería PVC Corrugada', 'Alcantarillado')">Cotizar por WhatsApp</button>
-                    </li>
-                </ul>
-            </div>
+<section style="padding-top:0"><div class="wrap">
+  <h2>Por qué comprar con nosotros</h2><br>
+  <div class="why">
+    <div><h3>Marcas reconocidas</h3><p>Plastigama y Rival, con respaldo de fábrica.</p></div>
+    <div><h3>Asesoría técnica</h3><p>Te ayudamos a elegir diámetro y presión según tu proyecto.</p></div>
+    <div><h3>Entrega en la zona</h3><p>Tumbaco, Cumbayá, Los Chillos y Quito.</p></div>
+    <div><h3>Atención directa</h3><p>Respuesta rápida por WhatsApp o teléfono.</p></div>
+  </div>
+</div></section>
 
-            <div class="categoria-bloque">
-                <div class="categoria-banner bg-riego">Sistemas de Riego</div>
-                <img src="aspersores.jpg" alt="Sistemas de riego agrícola, goteo y aspersión en Tumbaco" class="producto-imagen" loading="lazy">
-                <ul class="lista-productos">
-                    <li class="producto-item">
-                        <div>
-                            <div class="producto-nombre">Manguera Polietileno Riego</div>
-                            <div class="producto-detalle">Baja densidad, ideal para derivaciones agrícolas</div>
-                        </div>
-                        <button type="button" class="btn-whatsapp" onclick="abrirCotizador('Manguera Polietileno Riego', 'Sistemas de Riego')">Cotizar por WhatsApp</button>
-                    </li>
-                    <li class="producto-item">
-                        <div>
-                            <div class="producto-nombre">Cinta de Goteo</div>
-                            <div class="producto-detalle">Con goteros integrados a diversas distancias</div>
-                        </div>
-                        <button type="button" class="btn-whatsapp" onclick="abrirCotizador('Cinta de Goteo', 'Sistemas de Riego')">Cotizar por WhatsApp</button>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </main>
+<section id="preguntas" style="background:var(--card)"><div class="wrap">
+  <h2>Preguntas frecuentes</h2><br>
+  <details><summary>¿Hacen entregas en Cumbayá, Los Chillos y Quito?</summary><p>Sí. Atendemos pedidos con entrega en Tumbaco, Cumbayá, Los Chillos y Quito. Escríbenos por WhatsApp para coordinar.</p></details>
+  <details><summary>¿Qué tubería necesito para riego por goteo?</summary><p>Normalmente se usa tubería PVC o PEAD como línea principal, manguera de polietileno para derivaciones y cinta de goteo en los cultivos. Cuéntanos la superficie y el tipo de cultivo y te orientamos.</p></details>
+  <details><summary>¿Qué marcas venden?</summary><p>Distribuimos productos Plastigama y Rival.</p></details>
+  <details><summary>¿Cuál es el horario de atención?</summary><p>De lunes a sábado, de 8h00 a 18h00.</p></details>
+  <details><summary>¿Cómo pido una cotización?</summary><p>Pulsa "Cotizar" en el producto, elige diámetro y cantidad, y se abrirá WhatsApp con tu pedido listo para enviar.</p></details>
+</div></section>
 
-    <div id="modal-cotizar" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-titulo-producto">
-        <div class="modal-contenido">
-            <button type="button" class="cerrar-modal" onclick="cerrarModal()" aria-label="Cerrar modal">&times;</button>
-            <h3 id="modal-titulo-producto">Especificaciones de Cotización</h3>
-            <p class="modal-ayuda">Indícanos las dimensiones requeridas para enviar la información exacta a nuestro asesor técnico.</p>
-
-            <form id="form-modal" onsubmit="procesarEnvioWhatsApp(event)">
-                <div class="grupo-campo">
-                    <label for="modal-diametro">Diámetro requerido:</label>
-                    <select id="modal-diametro" required>
-                        <option value="">-- Seleccione diámetro --</option>
-                        <option value="1/2 pulgada">1/2"</option>
-                        <option value="3/4 pulgada">3/4"</option>
-                        <option value="1 pulgada">1"</option>
-                        <option value="1 1/2 pulgadas">1 1/2"</option>
-                        <option value="2 pulgadas">2"</option>
-                        <option value="3 pulgadas">3"</option>
-                        <option value="4 pulgadas">4"</option>
-                        <option value="6 pulgadas">6"</option>
-                        <option value="Otro / No aplica">Otro / No aplica</option>
-                    </select>
-                </div>
-                <div class="grupo-campo">
-                    <label for="modal-cantidad">Cantidad requerida (Metros / Unidades):</label>
-                    <input type="number" id="modal-cantidad" min="1" step="1" inputmode="numeric" placeholder="Ej: 150" required>
-                </div>
-                <button type="submit" class="btn-enviar-wa">Confirmar y Enviar a WhatsApp</button>
-            </form>
-        </div>
+<section id="contacto"><div class="wrap">
+  <h2>Contacto</h2><br>
+  <div class="contact">
+    <div>
+      <p><strong>Av. Oswaldo Guayasamín N4-234 y Av. Universitaria</strong><br>Sector Villa Vega, Tumbaco, Quito</p>
+      <table><tr><td>Lunes a sábado</td><td>8h00 a 18h00</td></tr><tr><td>Domingo</td><td>Cerrado</td></tr></table>
+      <p>WhatsApp y llamadas: <a href="tel:+593996541024">099 654 1024</a><br>Celular: <a href="tel:+593996600715">099 660 0715</a></p>
+      <a class="btn" href="https://wa.me/593996541024?text=Hola%20VPRIEGO%2C%20quisiera%20cotizar" target="_blank" rel="noopener">Escribir por WhatsApp</a>
     </div>
+    <iframe title="Mapa de VPRIEGO en Tumbaco" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d880.1893460450551!2d-78.38876921580066!3d-0.21281862589552636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d591440760769f%3A0x4f7e779101336216!2sVP%20Riego-%20Tuber%C3%ADa%20de%20agua%20potable!5e1!3m2!1ses-419!2sec!4v1779230176503!5m2!1ses-419!2sec"></iframe>
+  </div>
+</div></section>
+</main>
 
-    <footer id="contacto">
-        <div class="footer-contenido">
-            <div class="footer-columna">
-                <h4>VPRIEGO</h4>
-                <p>Tu aliado estratégico en infraestructura hidráulica, alcantarillado sanitario y tecnificación de riego agrícola en Tumbaco y Quito.</p>
-            </div>
-            <div class="footer-columna">
-                <h4>Ubicación Principal</h4>
-                <p>Av. Oswaldo Guayasamín N4-234 y Av. Universitaria</p>
-                <p><strong>Sector Villa Vega</strong>, Tumbaco - Quito</p>
-                <div class="mapa-contenedor">
-                    <iframe title="Mapa de ubicación de VP Riego en Tumbaco, Quito" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d880.1893460450551!2d-78.38876921580066!3d-0.21281862589552636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d591440760769f%3A0x4f7e779101336216!2sVP%20Riego-%20Tuber%C3%ADa%20de%20agua%20potable!5e1!3m2!1ses-419!2sec!4v1779230176503!5m2!1ses-419!2sec" allowfullscreen loading="lazy"></iframe>
-                </div>
-            </div>
-            <div class="footer-columna">
-                <h4>Líneas de Atención</h4>
-                <p>Celular 1: <a href="tel:+593996541024">099 654 1024</a></p>
-                <p>Celular 2: <a href="tel:+593996600715">099 660 0715</a></p>
-                <p style="margin-top: 1rem;"><em>Atendemos pedidos con entrega en Tumbaco, Cumbayá, Los Chillos y Quito.</em></p>
-            </div>
-        </div>
-        <div class="footer-derechos">
-            <p>© <span id="year"></span> VPRIEGO. Todos los derechos reservados.</p>
-            <p id="contador-visitas" style="margin-top: 0.8rem; font-size: 0.9rem;">
-                Visitas al sitio: <strong id="contador-numero" style="color: #6fd83a; font-size: 1.1rem;">Cargando...</strong>
-            </p>
-        </div>
-    </footer>
+<footer>© VPRIEGO. Tuberías y sistemas de riego en Tumbaco y Quito.</footer>
+<a class="fab" href="https://wa.me/593996541024?text=Hola%20VPRIEGO%2C%20quisiera%20cotizar" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">WhatsApp</a>
 
-    <script>
-        let productoSeleccionado = "";
-        let categoriaSeleccionada = "";
-        const modal = document.getElementById("modal-cotizar");
-        const tituloModal = document.getElementById("modal-titulo-producto");
-        const formModal = document.getElementById("form-modal");
+<dialog id="dlg">
+  <h3>Cotizar <span id="prod"></span></h3>
+  <label for="diam">Diámetro</label>
+  <select id="diam"><option>1/2"</option><option>3/4"</option><option>1"</option><option>1 1/2"</option><option>2"</option><option>3"</option><option>4"</option><option>6"</option><option>Otro / No aplica</option></select>
+  <label for="qty">Cantidad (metros o unidades)</label>
+  <input id="qty" type="text" inputmode="numeric" placeholder="Ej: 100 metros">
+  <div class="row"><button class="btn x" id="cancel" type="button">Cancelar</button><button class="btn" id="send" type="button">Enviar por WhatsApp</button></div>
+</dialog>
 
-        function abrirCotizador(producto, categoria) {
-            productoSeleccionado = producto;
-            categoriaSeleccionada = categoria;
-            tituloModal.textContent = `Cotizar: ${producto}`;
-            modal.style.display = "flex";
-        }
-
-        function cerrarModal() {
-            modal.style.display = "none";
-            formModal.reset();
-        }
-
-        function procesarEnvioWhatsApp(event) {
-            event.preventDefault();
-            const diametro = document.getElementById("modal-diametro").value;
-            const cantidad = document.getElementById("modal-cantidad").value;
-            const numeroTelefono = "593996541024";
-
-            const mensaje = `Hola VPRIEGO. Deseo solicitar una cotización:\n\n` +
-                            `• *Catálogo:* ${categoriaSeleccionada}\n` +
-                            `• *Producto:* ${productoSeleccionado}\n` +
-                            `• *Diámetro:* ${diametro}\n` +
-                            `• *Cantidad:* ${cantidad}\n\n` +
-                            `Quedo atento a su respuesta.`;
-
-            window.open(`https://wa.me/${numeroTelefono}?text=${encodeURIComponent(mensaje)}`, "_blank", "noopener,noreferrer");
-            cerrarModal();
-        }
-
-        modal.addEventListener("click", function (event) {
-            if (event.target === modal) cerrarModal();
-        });
-
-        document.addEventListener("keydown", function (event) {
-            if (event.key === "Escape" && modal.style.display === "flex") cerrarModal();
-        });
-
-        document.getElementById('year').textContent = new Date().getFullYear();
-
-        (function () {
-            const namespace = "vpriego-tumbaco-2024"; 
-            const url = `https://api.countapi.xyz/hit/${namespace}/visitas`;
-            fetch(url)
-                .then(res => res.json())
-                .then(data => {
-                    document.getElementById("contador-numero").textContent = data.value.toLocaleString("es-EC");
-                })
-                .catch(err => {
-                    console.warn("Contador no pudo cargar:", err);
-                    document.getElementById("contador-numero").textContent = "Disponible";
-                });
-        })();
-    </script>
+<script>
+(function(){
+  var dlg=document.getElementById('dlg'),prod='';
+  document.querySelectorAll('button[data-p]').forEach(function(b){
+    b.addEventListener('click',function(){prod=b.dataset.p;document.getElementById('prod').textContent=prod;dlg.showModal();});
+  });
+  document.getElementById('cancel').addEventListener('click',function(){dlg.close();});
+  document.getElementById('send').addEventListener('click',function(){
+    var d=document.getElementById('diam').value,q=document.getElementById('qty').value.trim()||'por confirmar';
+    var t='Hola VPRIEGO, quisiera cotizar: '+prod+'. Diámetro: '+d+'. Cantidad: '+q+'.';
+    window.open('https://wa.me/593996541024?text='+encodeURIComponent(t),'_blank');
+    dlg.close();
+  });
+  try{
+    var p=new Intl.DateTimeFormat('en-US',{timeZone:'America/Guayaquil',weekday:'short',hour:'numeric',hour12:false}).formatToParts(new Date());
+    var day=p.find(function(x){return x.type==='weekday'}).value,h=parseInt(p.find(function(x){return x.type==='hour'}).value,10)%24;
+    var open=day!=='Sun'&&h>=8&&h<18,s=document.getElementById('status');
+    s.className='status'+(open?' open':'');
+    s.querySelector('span').textContent=open?'Abierto ahora, hasta las 18h00':'Cerrado ahora. Atendemos lunes a sábado, 8h00 a 18h00';
+  }catch(e){}
+})();
+</script>
 </body>
 </html>

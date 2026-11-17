@@ -33,18 +33,26 @@ a{color:var(--water)}
 .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
 header{background:var(--water-d);color:#fff;position:sticky;top:0;z-index:20}
 header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:10px;padding-bottom:10px}
-.brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font:700 1.6rem "Barlow Condensed",sans-serif}
+.brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font:700 1.6rem/1 "Barlow Condensed",sans-serif}
+.brand small{display:block;font:400 .8rem "Source Sans 3",sans-serif;opacity:.8;margin-top:3px}
+nav{display:flex;align-items:center;gap:6px}
+.call{background:#fff;color:var(--water-d)!important;padding:8px 14px;border-radius:99px;margin-left:10px}
 .brand img{width:42px;height:42px;border-radius:8px;object-fit:cover;background:#fff}
-nav a{color:#fff;text-decoration:none;margin-left:18px;font-weight:600}
+nav a{color:#fff;text-decoration:none;margin-left:12px;font-weight:600}
 nav a:hover{text-decoration:underline}
 .btn{display:inline-block;border:0;cursor:pointer;font:700 1rem "Source Sans 3",sans-serif;padding:12px 20px;border-radius:var(--r);text-decoration:none;background:var(--wa);color:#fff}
 .btn:hover{filter:brightness(1.1)}
 .btn.alt{background:transparent;border:2px solid #fff}
-.hero{background:linear-gradient(120deg,var(--water-d),var(--water));color:#fff;padding:64px 0 56px}
-.hero h1{font-size:clamp(2.4rem,6vw,4rem);max-width:15ch}
-.hero p{max-width:52ch;margin:16px 0 24px;font-size:1.15rem}
+.hero{background:linear-gradient(120deg,var(--water-d),var(--water));color:#fff;padding:48px 0}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(2.6rem,5.5vw,4.2rem);margin-bottom:14px}
+.hero p{max-width:50ch;margin-bottom:22px;font-size:1.12rem}
 .hero .cta{display:flex;flex-wrap:wrap;gap:12px}
-.status{display:inline-block;margin-top:22px;padding:6px 14px;border-radius:99px;background:rgba(255,255,255,.15);font-weight:600}
+.hero .pic{position:relative}
+.hero .pic img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:16px;display:block;border:4px solid rgba(255,255,255,.25)}
+.hero .tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.hero .tags span{background:rgba(255,255,255,.16);padding:4px 12px;border-radius:99px;font-weight:600;font-size:.95rem}
+.status{display:inline-block;margin-top:20px;padding:6px 14px;border-radius:99px;background:rgba(0,0,0,.25);font-weight:600;font-size:.95rem}
 .status i{display:inline-block;width:10px;height:10px;border-radius:50%;background:#aaa;margin-right:8px}
 .status.open i{background:#4be08a}
 section{padding:56px 0}
@@ -82,25 +90,30 @@ select,input{width:100%;padding:10px;border:1px solid var(--line);border-radius:
 .row{display:flex;gap:10px;margin-top:20px}
 .row .btn{flex:1}
 .row .x{background:var(--line);color:var(--ink)}
-@media (max-width:640px){nav a.h{display:none}.hero{padding:44px 0}}
+@media (max-width:760px){.hero .wrap{grid-template-columns:1fr;gap:24px}.hero .pic{order:-1}.hero .pic img{aspect-ratio:16/9}}
+@media (max-width:640px){nav a.h{display:none}.brand small{display:none}.hero{padding:28px 0}.hero .cta .btn{flex:1;text-align:center}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
 <header><div class="wrap">
-  <a class="brand" href="#inicio"><img src="logo1.jpg" alt="Logo de VPRIEGO">VPRIEGO</a>
-  <nav><a class="h" href="#catalogos">Productos</a><a class="h" href="#preguntas">Preguntas</a><a href="#contacto">Contacto</a></nav>
+  <a class="brand" href="#inicio"><img src="logo1.jpg" alt="Logo de VPRIEGO"><span>VPRIEGO<small>Tuberías y riego · Tumbaco</small></span></a>
+  <nav><a class="h" href="#catalogos">Productos</a><a class="h" href="#preguntas">Preguntas</a><a class="h" href="#contacto">Contacto</a><a class="call" href="tel:+593996541024">Llamar</a></nav>
 </div></header>
 
 <main id="inicio">
 <div class="hero"><div class="wrap">
-  <h1>Tuberías y riego en Tumbaco</h1>
-  <p>Distribuimos tuberías Plastigama y Rival, accesorios, manguera y cinta de goteo para agua potable, alcantarillado y riego agrícola. Entregamos en Tumbaco, Cumbayá, Los Chillos y Quito.</p>
-  <div class="cta">
-    <a class="btn" href="https://wa.me/593996541024?text=Hola%20VPRIEGO%2C%20quisiera%20cotizar" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
-    <a class="btn alt" href="tel:+593996541024">Llamar 099 654 1024</a>
+  <div>
+    <h1>Tuberías y sistemas de riego en Tumbaco</h1>
+    <div class="tags"><span>Plastigama</span><span>Rival</span><span>Entrega en Quito y valles</span></div>
+    <p>Tubería PVC y PEAD, alcantarillado, manguera y cinta de goteo para agua potable y riego agrícola. Te asesoramos y cotizamos por WhatsApp.</p>
+    <div class="cta">
+      <a class="btn" href="https://wa.me/593996541024?text=Hola%20VPRIEGO%2C%20quisiera%20cotizar" target="_blank" rel="noopener">Cotizar por WhatsApp</a>
+      <a class="btn alt" href="tel:+593996541024">099 654 1024</a>
+    </div>
+    <div class="status" id="status"><i></i><span>Lunes a sábado, 8h00 a 18h00</span></div>
   </div>
-  <div class="status" id="status"><i></i><span>Lunes a sábado, 8h00 a 18h00</span></div>
+  <div class="pic"><img src="tuberia-agua.jpg" alt="Tuberías para agua potable y riego en VPRIEGO, Tumbaco" fetchpriority="high"></div>
 </div></div>
 
 <div class="brands">Marcas que distribuimos: <b>Plastigama</b><b>Rival</b></div>
